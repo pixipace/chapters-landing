@@ -43,7 +43,7 @@
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
             <h1 class="text-3xl md:text-4xl font-bold text-navy-800 mb-2">Privacy Policy</h1>
-            <p class="text-gray-500 mb-8">Last updated: December 27, 2024</p>
+            <p class="text-gray-500 mb-8">Last updated: May 13, 2026</p>
 
             <div class="prose prose-lg max-w-none text-gray-700">
                 <section class="mb-8">
@@ -84,6 +84,15 @@
                         <li>Course progress and completion data</li>
                         <li>Watch time statistics</li>
                     </ul>
+
+                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">2.4 Zoom Data (when connected)</h3>
+                    <p class="mb-4">If a merchant connects Zoom to host live class lessons, we collect:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-1">
+                        <li>OAuth access and refresh tokens (used only to create/update/delete meetings on their account)</li>
+                        <li>Connected Zoom user's display name and email (for Settings confirmation)</li>
+                        <li>Meeting metadata for meetings we create — meeting ID, scheduled time, duration, join URL</li>
+                    </ul>
+                    <p class="mb-4 text-sm text-navy-600">See section 4.3 for full details on Zoom integration data handling.</p>
                 </section>
 
                 <section class="mb-8">
@@ -115,7 +124,23 @@
                         See <a href="https://bunny.net/privacy" class="text-teal-600 hover:text-teal-700">Bunny.net Privacy Policy</a>.
                     </p>
 
-                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">4.3 Database Hosting</h3>
+                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">4.3 Zoom</h3>
+                    <p class="mb-4">
+                        Merchants may connect their Zoom account to Chapters to schedule and host live class meetings on their own Zoom account.
+                        When a merchant connects Zoom via OAuth, we receive and store the following on the merchant's behalf, encrypted at rest:
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-1">
+                        <li>OAuth access and refresh tokens (used solely to create, update, and delete meetings on the connected account)</li>
+                        <li>The connected Zoom user's display name and email address (shown back to the merchant in Settings as confirmation of which account is linked)</li>
+                        <li>Meeting metadata for meetings we create on the merchant's behalf — meeting ID, scheduled start time, duration, and join URL</li>
+                    </ul>
+                    <p class="mb-4">
+                        We do not store Zoom passwords, meeting recordings, attendee lists, or in-meeting content.
+                        Merchants can disconnect Zoom at any time from the Settings page; disconnection clears all stored Zoom tokens from our database.
+                        See <a href="https://zoom.us/privacy" class="text-teal-600 hover:text-teal-700">Zoom's Privacy Policy</a>.
+                    </p>
+
+                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">4.4 Database Hosting</h3>
                     <p class="mb-4">
                         Application data is stored in secure PostgreSQL databases hosted on industry-standard cloud infrastructure with encryption at rest and in transit.
                     </p>
@@ -128,6 +153,7 @@
                         <li><strong>Active Use:</strong> Data is retained while the app is installed</li>
                         <li><strong>After Uninstall:</strong> Shop data is deleted within 48 hours of app uninstallation</li>
                         <li><strong>Customer Requests:</strong> Customer data is deleted upon GDPR/CCPA requests via Shopify</li>
+                        <li><strong>Zoom Tokens:</strong> Cleared immediately when a merchant disconnects Zoom from Settings, or on app uninstall</li>
                     </ul>
                 </section>
 
@@ -154,7 +180,7 @@
                         <li><strong>Object:</strong> Object to certain processing activities</li>
                     </ul>
                     <p class="mb-4">
-                        To exercise these rights, contact us at <a href="mailto:hello@pixipace.com" class="text-teal-600 hover:text-teal-700">hello@pixipace.com</a>
+                        To exercise these rights, contact us at <a href="mailto:chapters@pixipace.com" class="text-teal-600 hover:text-teal-700">chapters@pixipace.com</a>
                         or submit a request through Shopify's customer data request system.
                     </p>
                 </section>
@@ -178,7 +204,7 @@
                     <p class="mb-4">If you have questions about this Privacy Policy, please contact us:</p>
                     <ul class="list-none space-y-2">
                         <li><strong>Company:</strong> Pixipace</li>
-                        <li><strong>Email:</strong> <a href="mailto:hello@pixipace.com" class="text-teal-600 hover:text-teal-700">hello@pixipace.com</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:chapters@pixipace.com" class="text-teal-600 hover:text-teal-700">chapters@pixipace.com</a></li>
                         <li><strong>Website:</strong> <a href="https://www.pixipace.com" class="text-teal-600 hover:text-teal-700">www.pixipace.com</a></li>
                     </ul>
                 </section>
