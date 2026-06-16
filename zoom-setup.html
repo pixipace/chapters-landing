@@ -1,199 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js-off">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom Setup Guide - Chapters by Pixipace</title>
-    <meta name="description" content="How to install, connect, use, and remove the Zoom integration in Chapters LMS for Shopify.">
+    <title>Zoom Setup Guide — Chapters by Pixipace</title>
+    <meta name="description" content="How to connect your Zoom account, schedule live classes, and manage recordings in Chapters for Shopify.">
+    <link rel="canonical" href="https://chapters.pixipace.com/zoom-setup.html">
+    <meta name="theme-color" content="#16376d">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chapters">
+    <meta property="og:title" content="Zoom Setup Guide — Chapters by Pixipace">
+    <meta property="og:description" content="How to connect your Zoom account, schedule live classes, and manage recordings in Chapters for Shopify.">
+    <meta property="og:image" content="https://chapters.pixipace.com/assets/og-image.png">
+    <meta property="og:url" content="https://chapters.pixipace.com/zoom-setup.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zoom Setup Guide — Chapters by Pixipace">
+    <meta name="twitter:description" content="How to connect your Zoom account, schedule live classes, and manage recordings in Chapters for Shopify.">
+    <meta name="twitter:image" content="https://chapters.pixipace.com/assets/og-image.png">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'Georgia', 'serif'],
+                    },
                     colors: {
-                        navy: {
-                            800: '#16376d',
-                            900: '#0f2744',
-                        },
-                        teal: {
-                            500: '#25ad9f',
-                            600: '#199473',
-                        }
+                        navy: { 50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#16376d',900:'#0f2744' },
+                        teal: { 50:'#effcf6',100:'#c6f7e2',200:'#8eedc7',300:'#65d6ad',400:'#3ebd93',500:'#25ad9f',600:'#199473',700:'#147d64',800:'#0c6b58',900:'#014d40' },
+                        gold: { 50:'#fbf7ee',100:'#f5ebd0',200:'#e9d4a0',300:'#dcbb6e',400:'#cfa548',500:'#c79a3a',600:'#a87d2c',700:'#855f24' },
                     }
                 }
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Chapters",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Shopify",
+      "description": "Sell online video courses, run timed exams, issue branded certificates, and host live classes directly from your Shopify store.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to install. 5% commission on course sales." },
+      "publisher": { "@type": "Organization", "name": "Pixipace", "url": "https://www.pixipace.com" },
+      "url": "https://chapters.pixipace.com/zoom-setup.html"
+    }
+    </script>
 </head>
-<body class="font-sans antialiased bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-gray-100">
+<body class="antialiased text-navy-900 bg-white">
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="siteNav" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center">
-                    <img src="assets/logo.svg" alt="Chapters" class="h-8">
+                <a href="/" class="flex items-center" aria-label="Chapters home">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8" width="160" height="56">
                 </a>
-                <a href="/" class="text-gray-600 hover:text-navy-800 transition">Back to Home</a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <div class="relative group">
+                        <a href="features.html" class="flex items-center gap-1 text-gray-600 hover:text-navy-800 transition font-medium py-5">
+                            Features
+                            <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[34rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 pt-2">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                                <a href="courses.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Courses &amp; video</span><span class="block text-xs text-gray-500 mt-0.5">Builder, secure player, quizzes</span></span>
+                                </a>
+                                <a href="exams.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Examinations</span><span class="block text-xs text-gray-500 mt-0.5">Timed, randomized, paid retakes</span></span>
+                                </a>
+                                <a href="certificates.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Certificates</span><span class="block text-xs text-gray-500 mt-0.5">Branded PDFs, public verify</span></span>
+                                </a>
+                                <a href="live-classes.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Live classes</span><span class="block text-xs text-gray-500 mt-0.5">Zoom, scheduled in-lesson</span></span>
+                                </a>
+                                <a href="storefront.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Sell on Shopify</span><span class="block text-xs text-gray-500 mt-0.5">Blocks, checkout, auto-enroll</span></span>
+                                </a>
+                                <a href="engagement.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Engage &amp; grow</span><span class="block text-xs text-gray-500 mt-0.5">Q&amp;A, email, push, insights</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
+                    <a href="index.html#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://apps.shopify.com/chapters" class="hidden sm:inline-flex bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
+                        Install Free
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-navy-900" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <p class="px-3 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Features</p>
+                <a href="courses.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Courses &amp; video</a>
+                <a href="exams.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Examinations</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Certificates</a>
+                <a href="live-classes.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Live classes</a>
+                <a href="storefront.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Sell on Shopify</a>
+                <a href="engagement.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Engage &amp; grow</a>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <a href="features.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">All features</a>
+                <a href="pricing.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Pricing</a>
+                <a href="index.html#faq" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">FAQ</a>
+                <a href="https://apps.shopify.com/chapters" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white text-center px-5 py-3 rounded-lg font-semibold transition">Install Free</a>
             </div>
         </div>
     </nav>
 
-    <!-- Content -->
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
-            <h1 class="text-3xl md:text-4xl font-bold text-navy-800 mb-2">Zoom Integration — Setup &amp; Usage Guide</h1>
-            <p class="text-gray-500 mb-8">Last updated: May 15, 2026</p>
+    <!-- ============ PAGE HEADER ============ -->
+    <header class="pt-28 pb-10 md:pt-32 md:pb-12 bg-navy-50/40 border-b border-navy-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Live classes</p>
+            <h1 class="font-display text-3xl md:text-5xl font-bold text-navy-900 tracking-tight text-balance">Zoom integration — setup &amp; usage guide</h1>
+            <p class="text-sm text-gray-500 mt-4">Last updated: May 15, 2026</p>
+        </div>
+    </header>
 
-            <div class="prose prose-lg max-w-none text-gray-700">
+    <!-- ============ CONTENT ============ -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div class="prose-chapters max-w-none">
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">Overview</h2>
-                    <p class="mb-4">
-                        Chapters LMS is a Shopify app that lets merchants sell online courses through their store.
-                        Live class lessons use Zoom — this guide walks through how a merchant connects their Zoom account,
-                        schedules live class meetings, and (when needed) disconnects.
-                    </p>
-                    <p class="mb-4">
-                        <strong>Who hosts the meeting:</strong> the meeting runs on the merchant's own Zoom account.
-                        Chapters never hosts meetings itself; we only call Zoom's API to create / update / delete meetings on the merchant's behalf.
-                    </p>
-                </section>
+            <h2>Overview</h2>
+            <p>
+                Chapters is a Shopify app that lets merchants sell online courses through their store.
+                Live class lessons use Zoom — this guide walks through how a merchant connects their Zoom account,
+                schedules live class meetings, and (when needed) disconnects.
+            </p>
+            <p>
+                <strong>Who hosts the meeting:</strong> the meeting runs on the merchant's own Zoom account.
+                Chapters never hosts meetings itself; we only call Zoom's API to create, update, and delete meetings on the merchant's behalf.
+            </p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">1. Install Chapters on your Shopify store</h2>
-                    <p class="mb-4">
-                        The Zoom integration lives inside Chapters LMS, which is a Shopify app. Install Chapters first:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-2">
-                        <li>Visit <a href="https://chapters.pixipace.com" class="text-teal-600 hover:text-teal-700">chapters.pixipace.com</a> and click "Install on Shopify" (or find Chapters LMS in the Shopify App Store).</li>
-                        <li>Approve the requested Shopify scopes (products, orders, customers — needed to auto-create course products and enroll students on order).</li>
-                        <li>Chapters opens inside your Shopify Admin. You're ready for step 2.</li>
-                    </ul>
-                </section>
+            <h2>1. Install Chapters on your Shopify store</h2>
+            <p>
+                The Zoom integration lives inside Chapters, which is a Shopify app. Install Chapters first:
+            </p>
+            <ul>
+                <li>Visit <a href="https://chapters.pixipace.com">chapters.pixipace.com</a> and click "Install on Shopify" (or find Chapters in the Shopify App Store).</li>
+                <li>Approve the requested Shopify scopes (products, orders, customers — needed to auto-create course products and enroll students on order).</li>
+                <li>Chapters opens inside your Shopify Admin. You're ready for step 2.</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">2. Connect your Zoom account</h2>
-                    <p class="mb-4">
-                        Inside Chapters in your Shopify Admin:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-2">
-                        <li>Click <strong>Settings</strong> in the left sidebar.</li>
-                        <li>Open the <strong>Live Classes</strong> tab.</li>
-                        <li>In the Zoom card, click <strong>Connect Zoom</strong>.</li>
-                        <li>You'll be redirected to Zoom's OAuth approval page — sign in if needed and approve the requested permissions.</li>
-                        <li>Zoom redirects you back to Chapters Settings, which now shows <strong>Connected as your-email@example.com</strong> with a Disconnect button.</li>
-                    </ul>
-                    <p class="mb-4">
-                        That's it. Chapters can now create meetings on your Zoom account.
-                        You only need to do this once per Shopify store.
-                    </p>
-                </section>
+            <h2>2. Connect your Zoom account</h2>
+            <p>
+                Inside Chapters in your Shopify Admin:
+            </p>
+            <ul>
+                <li>Click <strong>Settings</strong> in the left sidebar.</li>
+                <li>Open the <strong>Live Classes</strong> tab.</li>
+                <li>In the Zoom card, click <strong>Connect Zoom</strong>.</li>
+                <li>You'll be redirected to Zoom's OAuth approval page — sign in if needed and approve the requested permissions.</li>
+                <li>Zoom redirects you back to Chapters Settings, which now shows <strong>Connected as your-email@example.com</strong> with a Disconnect button.</li>
+            </ul>
+            <p>
+                That's it. Chapters can now create meetings on your Zoom account.
+                You only need to do this once per Shopify store.
+            </p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">3. Schedule a live class meeting</h2>
-                    <p class="mb-4">
-                        After Zoom is connected, you can schedule meetings from any LIVE-type lesson:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-2">
-                        <li>Open a course in Chapters.</li>
-                        <li>Add a new lesson (or edit an existing one) and set its type to <strong>Live Session</strong>.</li>
-                        <li>The lesson modal shows a <strong>Schedule Zoom meeting</strong> form: pick a start date &amp; time and a duration.</li>
-                        <li>Click <strong>Create Zoom meeting</strong>. Chapters calls Zoom's API to create the meeting on your account.</li>
-                        <li>The modal switches to a "Scheduled" state showing the meeting URL, with <strong>Reschedule</strong> and <strong>Delete</strong> actions.</li>
-                    </ul>
-                    <p class="mb-4">
-                        The meeting now appears on your Zoom dashboard (zoom.us → Meetings) like any other scheduled meeting,
-                        and your enrolled students see an <strong>Open in Zoom</strong> button on the lesson page.
-                        Meetings auto-record to your Zoom cloud.
-                    </p>
-                </section>
+            <h2>3. Schedule a live class meeting</h2>
+            <p>
+                After Zoom is connected, you can schedule meetings from any LIVE-type lesson:
+            </p>
+            <ul>
+                <li>Open a course in Chapters.</li>
+                <li>Add a new lesson (or edit an existing one) and set its type to <strong>Live Session</strong>.</li>
+                <li>The lesson modal shows a <strong>Schedule Zoom meeting</strong> form: pick a start date &amp; time and a duration.</li>
+                <li>Click <strong>Create Zoom meeting</strong>. Chapters calls Zoom's API to create the meeting on your account.</li>
+                <li>The modal switches to a "Scheduled" state showing the meeting URL, with <strong>Reschedule</strong> and <strong>Delete</strong> actions.</li>
+            </ul>
+            <p>
+                The meeting now appears on your Zoom dashboard (zoom.us → Meetings) like any other scheduled meeting,
+                and your enrolled students see an <strong>Open in Zoom</strong> button on the lesson page.
+            </p>
+            <p>
+                If your Zoom plan supports cloud recording, your session can record to your Zoom cloud; afterwards you can
+                attach that recording to the lesson so it becomes an on-demand replay for students who couldn't make the live time.
+            </p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">4. Reschedule or delete a meeting</h2>
-                    <ul class="list-disc pl-6 mb-4 space-y-2">
-                        <li><strong>Reschedule:</strong> open the lesson, change the date/time/duration in the meeting card, click <strong>Update meeting</strong>. The change syncs to Zoom instantly.</li>
-                        <li><strong>Delete:</strong> click <strong>Delete meeting</strong> in the lesson modal. Chapters deletes the meeting from your Zoom calendar via the API.</li>
-                    </ul>
-                </section>
+            <h2>4. Reschedule or delete a meeting</h2>
+            <ul>
+                <li><strong>Reschedule:</strong> open the lesson, change the date, time, or duration in the meeting card, then click <strong>Update meeting</strong>. The change syncs to Zoom instantly.</li>
+                <li><strong>Delete:</strong> click <strong>Delete meeting</strong> in the lesson modal. Chapters deletes the meeting from your Zoom calendar via the API.</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">5. Disconnect or remove the integration</h2>
-                    <p class="mb-4">
-                        You can disconnect Zoom from Chapters at any time, or remove the Chapters app from your Zoom account.
-                        Both methods clear all stored Zoom credentials from our database.
-                    </p>
-                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">Option A — Disconnect from Chapters Settings</h3>
-                    <ul class="list-disc pl-6 mb-4 space-y-2">
-                        <li>In Chapters → Settings → Live Classes → Zoom card, click <strong>Disconnect</strong>.</li>
-                        <li>Chapters immediately clears your stored OAuth tokens, refresh tokens, and the connected user email from our database.</li>
-                        <li>Existing meeting links on past lessons continue to work (the meeting still exists on Zoom), but Chapters can no longer create or modify meetings until you reconnect.</li>
-                    </ul>
-                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">Option B — Remove from Zoom Marketplace</h3>
-                    <ul class="list-disc pl-6 mb-4 space-y-2">
-                        <li>Go to <a href="https://marketplace.zoom.us/user/installed" class="text-teal-600 hover:text-teal-700">Zoom Marketplace → Manage → Installed Apps</a>.</li>
-                        <li>Find Chapters LMS and click <strong>Remove</strong>.</li>
-                        <li>Zoom sends a deauthorization webhook to Chapters, which immediately clears all your stored Zoom data from our database.</li>
-                    </ul>
-                </section>
+            <h2>5. Disconnect or remove the integration</h2>
+            <p>
+                You can disconnect Zoom from Chapters at any time, or remove the Chapters app from your Zoom account.
+                Both methods clear all stored Zoom credentials from our database.
+            </p>
+            <h3>Option A — Disconnect from Chapters Settings</h3>
+            <ul>
+                <li>In Chapters → Settings → Live Classes → Zoom card, click <strong>Disconnect</strong>.</li>
+                <li>Chapters immediately clears your stored OAuth tokens, refresh tokens, and the connected user email from our database.</li>
+                <li>Existing meeting links on past lessons continue to work (the meeting still exists on Zoom), but Chapters can no longer create or modify meetings until you reconnect.</li>
+            </ul>
+            <h3>Option B — Remove from Zoom Marketplace</h3>
+            <ul>
+                <li>Go to <a href="https://marketplace.zoom.us/user/installed">Zoom Marketplace → Manage → Installed Apps</a>.</li>
+                <li>Find Chapters and click <strong>Remove</strong>.</li>
+                <li>Zoom sends a deauthorization webhook to Chapters, which immediately clears all your stored Zoom data from our database.</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">What we store, what we don't</h2>
-                    <p class="mb-4">
-                        Per the Privacy Policy, when you connect Zoom we store on your behalf:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-2">
-                        <li>OAuth access token + refresh token (used only to create / update / delete meetings on your account)</li>
-                        <li>Your connected Zoom user's display name and email (shown back to you in Settings as confirmation)</li>
-                        <li>Meeting metadata for meetings we create — meeting ID, scheduled time, duration, join URL</li>
-                    </ul>
-                    <p class="mb-4">
-                        We do <strong>not</strong> store Zoom passwords, meeting recordings, attendee lists, or any in-meeting content.
-                        Tokens are encrypted at rest in our PostgreSQL database (Supabase) and cleared immediately on disconnect or app removal.
-                    </p>
-                    <p class="mb-4">
-                        See the full <a href="/privacy.html" class="text-teal-600 hover:text-teal-700">Privacy Policy</a> for details.
-                    </p>
-                </section>
+            <h2>What we store, what we don't</h2>
+            <p>
+                Per the Privacy Policy, when you connect Zoom we store on your behalf:
+            </p>
+            <ul>
+                <li>OAuth access token and refresh token (used only to create, update, and delete meetings on your account)</li>
+                <li>Your connected Zoom user's display name and email (shown back to you in Settings as confirmation)</li>
+                <li>Meeting metadata for meetings we create — meeting ID, scheduled time, duration, join URL</li>
+            </ul>
+            <p>
+                We do <strong>not</strong> store Zoom passwords, meeting recordings, attendee lists, or any in-meeting content.
+                Tokens are encrypted at rest in our PostgreSQL database (Supabase) and cleared immediately on disconnect or app removal.
+            </p>
+            <p>
+                See the full <a href="/privacy.html">Privacy Policy</a> for details.
+            </p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">Troubleshooting</h2>
-                    <p class="mb-4">
-                        <strong>"Couldn't complete Zoom connection" after authorizing:</strong>
-                        Usually means Zoom's deauthorized our access on their side, or our credentials aren't matching. Try clicking Connect Zoom again from Settings. If it persists, contact support.
-                    </p>
-                    <p class="mb-4">
-                        <strong>"Couldn't create the Zoom meeting" when clicking Create:</strong>
-                        Your stored tokens may have been revoked from Zoom's side. Click Disconnect in Chapters Settings, then Connect Zoom again to refresh.
-                    </p>
-                    <p class="mb-4">
-                        <strong>Students see "Meeting has not started yet" on Open in Zoom:</strong>
-                        Chapters creates meetings with the host required to start first (default Zoom security). Start the meeting from your Zoom client at the scheduled time, then students can join.
-                    </p>
-                </section>
+            <h2>Troubleshooting</h2>
+            <p>
+                <strong>"Couldn't complete Zoom connection" after authorizing:</strong>
+                Usually means Zoom has deauthorized our access on their side, or our credentials aren't matching. Try clicking Connect Zoom again from Settings. If it persists, contact support.
+            </p>
+            <p>
+                <strong>"Couldn't create the Zoom meeting" when clicking Create:</strong>
+                Your stored tokens may have been revoked from Zoom's side. Click Disconnect in Chapters Settings, then Connect Zoom again to refresh.
+            </p>
+            <p>
+                <strong>Students see "Meeting has not started yet" on Open in Zoom:</strong>
+                Chapters creates meetings with the host required to start first (default Zoom security). Start the meeting from your Zoom client at the scheduled time, then students can join.
+            </p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">Support</h2>
-                    <p class="mb-4">
-                        Questions, bug reports, or feedback?
-                        Email <a href="mailto:chapters@pixipace.com" class="text-teal-600 hover:text-teal-700">chapters@pixipace.com</a> — we typically reply within one business day.
-                    </p>
-                </section>
+            <h2>Support</h2>
+            <p>
+                Questions, bug reports, or feedback?
+                Email <a href="mailto:chapters@pixipace.com">chapters@pixipace.com</a> — we typically reply within one business day.
+            </p>
 
-            </div>
-        </article>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-navy-900 text-white py-12 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400 text-sm">© 2026 Pixipace. All rights reserved.</p>
-            <div class="mt-4 space-x-6 text-sm">
-                <a href="/privacy.html" class="text-gray-400 hover:text-white transition">Privacy</a>
-                <a href="/terms.html" class="text-gray-400 hover:text-white transition">Terms</a>
-                <a href="mailto:chapters@pixipace.com" class="text-gray-400 hover:text-white transition">Contact</a>
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-navy-900 text-gray-400 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert" width="160" height="56">
+                    <p class="text-sm leading-relaxed max-w-xs">Sell courses, exams, and certificates — and host live classes — directly from your Shopify store.</p>
+                    <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 mt-5 bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-lg text-sm font-semibold transition border border-white/15">Install on Shopify</a>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="courses.html" class="hover:text-teal-400 transition">Courses &amp; video</a></li>
+                        <li><a href="exams.html" class="hover:text-teal-400 transition">Examinations</a></li>
+                        <li><a href="certificates.html" class="hover:text-teal-400 transition">Certificates</a></li>
+                        <li><a href="live-classes.html" class="hover:text-teal-400 transition">Live classes</a></li>
+                        <li><a href="storefront.html" class="hover:text-teal-400 transition">Sell on Shopify</a></li>
+                        <li><a href="engagement.html" class="hover:text-teal-400 transition">Engage &amp; grow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-teal-400 transition">All features</a></li>
+                        <li><a href="pricing.html" class="hover:text-teal-400 transition">Pricing</a></li>
+                        <li><a href="index.html#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="zoom-setup.html" class="hover:text-teal-400 transition">Zoom setup guide</a></li>
+                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.pixipace.com" class="hover:text-teal-400 transition">Pixipace</a></li>
+                        <li><a href="mailto:chapters@pixipace.com" class="hover:text-teal-400 transition">chapters@pixipace.com</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-sm">&copy; <span data-year>2026</span> Pixipace. All rights reserved.</p>
+                <p class="text-sm">Free to install · 5% only when you sell</p>
             </div>
         </div>
     </footer>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

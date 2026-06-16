@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js-off">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapters — Sell Online Courses on Shopify</title>
-    <meta name="description" content="Create and sell online video courses directly from your Shopify store. Free to install. We only earn when you sell.">
+    <title>Chapters — Sell Online Courses, Exams &amp; Certificates on Shopify</title>
+    <meta name="description" content="Chapters turns your Shopify store into a school. Sell video courses, run timed exams, issue branded certificates, and host live classes — all natively in Shopify. Free to install, 5% only when you sell.">
+    <link rel="canonical" href="https://chapters.pixipace.com/">
+    <meta name="theme-color" content="#16376d">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chapters">
+    <meta property="og:title" content="Chapters — Turn your Shopify store into a school">
+    <meta property="og:description" content="Sell video courses, run exams, issue certificates, and host live classes — natively in Shopify. Free to install, 5% only when you sell.">
+    <meta property="og:image" content="https://chapters.pixipace.com/assets/og-image.png">
+    <meta property="og:url" content="https://chapters.pixipace.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chapters — Turn your Shopify store into a school">
+    <meta name="twitter:description" content="Courses · Exams · Certificates · Live classes — native to Shopify. Free to install.">
+    <meta name="twitter:image" content="https://chapters.pixipace.com/assets/og-image.png">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,32 +26,12 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'Georgia', 'serif'],
                     },
                     colors: {
-                        navy: {
-                            50: '#f0f4f8',
-                            100: '#d9e2ec',
-                            200: '#bcccdc',
-                            300: '#9fb3c8',
-                            400: '#829ab1',
-                            500: '#627d98',
-                            600: '#486581',
-                            700: '#334e68',
-                            800: '#16376d',
-                            900: '#0f2744',
-                        },
-                        teal: {
-                            50: '#effcf6',
-                            100: '#c6f7e2',
-                            200: '#8eedc7',
-                            300: '#65d6ad',
-                            400: '#3ebd93',
-                            500: '#25ad9f',
-                            600: '#199473',
-                            700: '#147d64',
-                            800: '#0c6b58',
-                            900: '#014d40',
-                        }
+                        navy: { 50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#16376d',900:'#0f2744' },
+                        teal: { 50:'#effcf6',100:'#c6f7e2',200:'#8eedc7',300:'#65d6ad',400:'#3ebd93',500:'#25ad9f',600:'#199473',700:'#147d64',800:'#0c6b58',900:'#014d40' },
+                        gold: { 50:'#fbf7ee',100:'#f5ebd0',200:'#e9d4a0',300:'#dcbb6e',400:'#cfa548',500:'#c79a3a',600:'#a87d2c',700:'#855f24' },
                     }
                 }
             }
@@ -46,76 +39,122 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f2744 0%, #16376d 60%, #1e4a8f 100%);
-        }
-        .hero-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2325ad9f' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .text-balance { text-wrap: balance; }
-        @keyframes liveDot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.55; transform: scale(1.35); }
-        }
-        .live-dot { animation: liveDot 1.6s ease-in-out infinite; transform-origin: center; }
-        details[open] .faq-toggle { transform: rotate(45deg); }
-        .faq-toggle { transition: transform 0.25s ease; }
-        details summary::-webkit-details-marker { display: none; }
-        details summary { list-style: none; }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Chapters",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Shopify",
+      "description": "Sell online video courses, run timed exams, issue branded certificates, and host live classes directly from your Shopify store.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to install. 5% commission on course sales." },
+      "publisher": { "@type": "Organization", "name": "Pixipace", "url": "https://www.pixipace.com" },
+      "url": "https://chapters.pixipace.com/"
+    }
+    </script>
 </head>
-<body class="antialiased text-navy-900">
+<body class="antialiased text-navy-900 bg-white">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="siteNav" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center">
-                    <img src="assets/logo.svg" alt="Chapters" class="h-8">
+                <a href="/" class="flex items-center" aria-label="Chapters home">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8" width="160" height="56">
                 </a>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-600 hover:text-navy-800 transition font-medium">Features</a>
-                    <a href="#storefront" class="text-gray-600 hover:text-navy-800 transition font-medium">Storefront</a>
-                    <a href="#how-it-works" class="text-gray-600 hover:text-navy-800 transition font-medium">How it Works</a>
-                    <a href="#pricing" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
-                    <a href="#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <div class="relative group">
+                        <a href="features.html" class="flex items-center gap-1 text-gray-600 hover:text-navy-800 transition font-medium py-5">
+                            Features
+                            <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[34rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 pt-2">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                                <a href="courses.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Courses &amp; video</span><span class="block text-xs text-gray-500 mt-0.5">Builder, secure player, quizzes</span></span>
+                                </a>
+                                <a href="exams.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Examinations</span><span class="block text-xs text-gray-500 mt-0.5">Timed, randomized, paid retakes</span></span>
+                                </a>
+                                <a href="certificates.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Certificates</span><span class="block text-xs text-gray-500 mt-0.5">Branded PDFs, public verify</span></span>
+                                </a>
+                                <a href="live-classes.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Live classes</span><span class="block text-xs text-gray-500 mt-0.5">Zoom, scheduled in-lesson</span></span>
+                                </a>
+                                <a href="storefront.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Sell on Shopify</span><span class="block text-xs text-gray-500 mt-0.5">Blocks, checkout, auto-enroll</span></span>
+                                </a>
+                                <a href="engagement.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Engage &amp; grow</span><span class="block text-xs text-gray-500 mt-0.5">Q&amp;A, email, push, insights</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
+                    <a href="index.html#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
                 </div>
-                <a href="https://apps.shopify.com/chapters" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
-                    Install Free
-                </a>
+                <div class="flex items-center gap-3">
+                    <a href="https://apps.shopify.com/chapters" class="hidden sm:inline-flex bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
+                        Install Free
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-navy-900" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <p class="px-3 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Features</p>
+                <a href="courses.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Courses &amp; video</a>
+                <a href="exams.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Examinations</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Certificates</a>
+                <a href="live-classes.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Live classes</a>
+                <a href="storefront.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Sell on Shopify</a>
+                <a href="engagement.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Engage &amp; grow</a>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <a href="features.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">All features</a>
+                <a href="pricing.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Pricing</a>
+                <a href="index.html#faq" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">FAQ</a>
+                <a href="https://apps.shopify.com/chapters" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white text-center px-5 py-3 rounded-lg font-semibold transition">Install Free</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="gradient-bg hero-pattern pt-32 pb-20 md:pt-40 md:pb-32">
+    <!-- ============ HERO ============ -->
+    <section class="gradient-bg hero-pattern pt-28 pb-20 md:pt-36 md:pb-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div>
                     <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-200 text-xs font-semibold tracking-wide uppercase mb-6 border border-teal-400/30">
                         <span class="w-1.5 h-1.5 rounded-full bg-teal-300 live-dot"></span>
-                        New on the Shopify App Store
+                        On the Shopify App Store
                     </span>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-6 text-balance">
-                        Sell online courses<br>
-                        <span class="text-teal-300">directly from Shopify.</span>
+                    <h1 class="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.05] tracking-tight mb-6 text-balance">
+                        Turn your store<br>
+                        into <span class="text-teal-300">a school.</span>
                     </h1>
-                    <p class="text-xl text-navy-100 mb-8 max-w-xl leading-relaxed">
-                        Create beautiful video courses, run live classes, and turn your storefront into a school — all without leaving Shopify.
+                    <p class="text-xl text-navy-100 mb-8 max-w-xl leading-relaxed text-pretty">
+                        Sell video courses, run timed exams, issue branded certificates, and host live classes — all natively inside Shopify. One app for the whole learning business.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="https://apps.shopify.com/chapters" class="bg-teal-500 hover:bg-teal-400 text-white px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
                             Install Free
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                         </a>
-                        <a href="#how-it-works" class="bg-white/10 hover:bg-white/15 text-white px-7 py-3.5 rounded-lg font-semibold text-base transition border border-white/20 inline-flex items-center justify-center">
-                            See how it works
+                        <a href="features.html" class="bg-white/10 hover:bg-white/15 text-white px-7 py-3.5 rounded-lg font-semibold text-base transition border border-white/20 inline-flex items-center justify-center">
+                            Explore features
                         </a>
                     </div>
                     <p class="text-sm text-navy-200 mt-6 flex items-center gap-2">
@@ -125,456 +164,270 @@
                 </div>
 
                 <!-- Hero Mockup -->
-                <div class="relative">
+                <div class="relative reveal">
                     <div class="rounded-2xl bg-navy-900/60 border border-white/10 overflow-hidden shadow-2xl backdrop-blur-sm">
-                        <!-- chrome -->
                         <div class="flex items-center gap-1.5 px-4 h-9 border-b border-white/5 bg-navy-900/80">
                             <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
                             <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
                             <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
-                            <div class="ml-3 px-3 py-1 rounded-md bg-white/5 text-[10px] text-white/40 font-mono">
-                                yourstore.com/courses
-                            </div>
+                            <div class="ml-3 px-3 py-1 rounded-md bg-white/5 text-[10px] text-white/40 font-mono">yourstore.com/courses</div>
                         </div>
-                        <!-- body -->
                         <div class="grid grid-cols-12 min-h-[340px]">
-                            <!-- sidebar -->
                             <aside class="col-span-5 border-r border-white/5 p-4">
                                 <p class="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-3">Chapter 02</p>
                                 <ul class="space-y-1.5 text-[11px]">
-                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/55">
-                                        <svg class="w-3 h-3 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                        Centering the clay
-                                    </li>
-                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/55">
-                                        <svg class="w-3 h-3 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                        Opening the base
-                                    </li>
-                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded bg-teal-500/15 text-white border-l-2 border-teal-400">
-                                        <svg class="w-3 h-3 text-teal-300" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="currentColor"/></svg>
-                                        Pulling walls up
-                                        <span class="ml-auto text-[9px] text-white/45 font-mono">12:04</span>
-                                    </li>
-                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/40">
-                                        <span class="w-3 h-3 rounded-full border border-white/30"></span>
-                                        Quiz: Wall thickness
-                                    </li>
-                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/40">
-                                        <span class="w-3 h-3 rounded-full border border-white/30"></span>
-                                        Assignment: 3 cylinders
-                                    </li>
-                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/40">
-                                        <span class="w-3 h-3 rounded-full border border-white/30 flex items-center justify-center">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-teal-400 live-dot"></span>
-                                        </span>
-                                        Live Q&amp;A — Thu 6pm
-                                    </li>
+                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/55"><svg class="w-3 h-3 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Centering the clay</li>
+                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/55"><svg class="w-3 h-3 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Opening the base</li>
+                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded bg-teal-500/15 text-white border-l-2 border-teal-400"><svg class="w-3 h-3 text-teal-300" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="currentColor"/></svg>Pulling walls up<span class="ml-auto text-[9px] text-white/45 font-mono">12:04</span></li>
+                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/40"><span class="w-3 h-3 rounded-full border border-white/30"></span>Quiz: Wall thickness</li>
+                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/40"><span class="w-3 h-3 rounded-full border border-white/30"></span>Final exam: Throwing</li>
+                                    <li class="flex items-center gap-2 px-2 py-1.5 rounded text-white/40"><span class="w-3 h-3 rounded-full border border-white/30 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 live-dot"></span></span>Live Q&amp;A — Thu 6pm</li>
                                 </ul>
                             </aside>
-                            <!-- main -->
                             <main class="col-span-7 p-4 flex flex-col gap-3">
                                 <div class="relative rounded-lg overflow-hidden border border-white/5 aspect-video bg-gradient-to-br from-navy-700 to-navy-900">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="w-12 h-12 rounded-full bg-white/95 flex items-center justify-center shadow-lg">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#0f2744"><path d="M8 5v14l11-7z"/></svg>
-                                        </div>
-                                    </div>
-                                    <div class="absolute top-2 left-2 flex items-center gap-1.5 bg-teal-500/95 text-navy-900 text-[9px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-navy-900 live-dot"></span>
-                                        Live in 10 min
-                                    </div>
+                                    <div class="absolute inset-0 flex items-center justify-center"><div class="w-12 h-12 rounded-full bg-white/95 flex items-center justify-center shadow-lg"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0f2744"><path d="M8 5v14l11-7z"/></svg></div></div>
+                                    <div class="absolute top-2 left-2 flex items-center gap-1.5 bg-teal-500/95 text-navy-900 text-[9px] font-bold px-2 py-1 rounded-full uppercase tracking-wider"><span class="w-1.5 h-1.5 rounded-full bg-navy-900 live-dot"></span>Live in 10 min</div>
                                 </div>
-                                <p class="text-[9px] uppercase tracking-wider text-white/40 font-semibold">Lesson 03 / Chapter 02</p>
-                                <h3 class="text-white font-semibold text-sm leading-tight">Pulling walls up with rhythm</h3>
-                                <div class="flex items-center gap-2 mt-1">
-                                    <div class="flex-1 h-1 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[58%] bg-teal-400 rounded-full"></div></div>
-                                    <span class="text-[10px] text-white/50 font-mono">58%</span>
-                                </div>
+                                <p class="text-[9px] uppercase tracking-wider text-white/50 font-semibold">Lesson 03 / Chapter 02</p>
+                                <p class="text-white font-semibold text-sm leading-tight">Pulling walls up with rhythm</p>
+                                <div class="flex items-center gap-2 mt-1"><div class="flex-1 h-1 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[58%] bg-teal-400 rounded-full"></div></div><span class="text-[10px] text-white/50 font-mono">58%</span></div>
                             </main>
                         </div>
                     </div>
-                    <!-- floating completion toast -->
                     <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-2xl px-4 py-3 flex items-center gap-3 max-w-[220px] hidden md:flex">
-                        <div class="w-9 h-9 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                        </div>
-                        <div>
-                            <p class="text-[12px] font-semibold text-navy-900 leading-tight">Lesson complete</p>
-                            <p class="text-[10px] text-gray-500 font-mono mt-0.5">+5 min · 78% through</p>
-                        </div>
+                        <div class="w-9 h-9 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                        <div><p class="text-[12px] font-semibold text-navy-900 leading-tight">Lesson complete</p><p class="text-[10px] text-gray-500 font-mono mt-0.5">+5 min · 78% through</p></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Badges -->
+    <!-- ============ TRUST BAR ============ -->
     <section class="py-10 bg-gray-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-xs font-semibold tracking-wider uppercase text-gray-500 mb-6">Built for course creators on Shopify</p>
+            <p class="text-center text-xs font-semibold tracking-wider uppercase text-gray-500 mb-6">Everything a course business needs — in one Shopify app</p>
             <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 text-gray-600">
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm font-medium">Secure video hosting</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm font-medium">Native Shopify checkout</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm font-medium">Auto enrollment</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm font-medium">Free to install</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm font-medium">Mobile ready</span>
-                </div>
+                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-sm font-medium">Token-protected video</span></div>
+                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-sm font-medium">Native Shopify checkout</span></div>
+                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-sm font-medium">Instant auto-enrollment</span></div>
+                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-sm font-medium">GDPR compliant</span></div>
+                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-sm font-medium">Mobile &amp; PWA ready</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- ============ PILLARS ============ -->
     <section id="features" class="py-20 md:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 max-w-2xl mx-auto">
-                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Everything you need</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">A whole school, inside your store.</h2>
-                <p class="text-xl text-gray-600">Powerful features designed for course creators who'd rather teach than fight with software.</p>
+            <div class="text-center mb-16 max-w-2xl mx-auto reveal">
+                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Six products, one app</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Stop stitching four tools together.</h2>
+                <p class="text-xl text-gray-600 text-pretty">Most creators bolt a course tool to an exam tool to a certificate maker to a checkout. Chapters is all of it — and it lives where your customers already are.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 1 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Secure video hosting</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">High-quality streaming with token-protected playback. No public URLs, no easy leaks.</p>
-                </div>
+                <!-- Courses -->
+                <a href="courses.html" class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Courses &amp; video</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-4">Drag-and-drop builder with chapters and lessons. Token-protected streaming, quizzes, drip scheduling, and completion gates.</p>
+                    <span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+                <!-- Exams -->
+                <a href="exams.html" class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-12 h-12 bg-navy-50 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7l2 2 4-4"/></svg></div>
+                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Examinations</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-4">A focused exam hall with 7 question types, timed sittings, randomized pools, paid retakes, and per-question analytics.</p>
+                    <span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+                <!-- Certificates -->
+                <a href="certificates.html" class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-12 h-12 bg-gold-50 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m-6 9a7 7 0 110-14 7 7 0 010 14zm0 0v3l-2-1-2 1m8-3v3l2-1 2 1"/></svg></div>
+                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Certificates</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-4">Engraved, branded PDF diplomas with your logo and signature — issued on completion and verifiable on a public page.</p>
+                    <span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+                <!-- Live -->
+                <a href="live-classes.html" class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Live classes</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-4">Connect your Zoom account once and schedule live lessons inside the course. Students join from the lesson page.</p>
+                    <span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+                <!-- Storefront -->
+                <a href="storefront.html" class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-12 h-12 bg-navy-50 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 5h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"/></svg></div>
+                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Sell on Shopify</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-4">Theme blocks, checkout extensions, native checkout, and instant auto-enrollment. Sell a course like any product.</p>
+                    <span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+                <!-- Engagement -->
+                <a href="engagement.html" class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg></div>
+                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Engage &amp; grow</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-4">Lesson Q&amp;A, reviews, branded lifecycle emails, push reminders, and a real-time insights dashboard.</p>
+                    <span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+            </div>
 
-                <!-- 2 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-navy-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-navy-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h10M4 18h10"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Courses, chapters &amp; lessons</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Drag-and-drop course builder. Structure exactly the way your students learn best.</p>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Quizzes &amp; assignments</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Auto-graded quizzes and student-submitted assignments — built into every lesson.</p>
-                </div>
-
-                <!-- 4 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-navy-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-navy-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M16 10l5-3v10l-5-3"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Live classes via Zoom</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Schedule live sessions and let students join straight from the course page.</p>
-                </div>
-
-                <!-- 5 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 12h18M3 19h12"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Discussion &amp; reviews</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Course-level Q&amp;A and student reviews keep your community alive.</p>
-                </div>
-
-                <!-- 6 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-navy-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-navy-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 5h13"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Shopify checkout</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Sell courses like any product. Use your existing discounts, gift cards, and currencies.</p>
-                </div>
-
-                <!-- 7 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Auto enrollment</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Customers get instant course access the moment they check out. No manual work.</p>
-                </div>
-
-                <!-- 8 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-navy-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-navy-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Real-time analytics</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Enrollments, completion rates, revenue per course — all at a glance.</p>
-                </div>
-
-                <!-- 9 -->
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg transition">
-                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 00-9.33-5"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.73 21a2 2 0 01-3.46 0M5 5l14 14"/></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Push &amp; branded email</h3>
-                    <p class="text-gray-600 text-[15px] leading-relaxed">Keep students coming back with push notifications and email that looks like your brand.</p>
-                </div>
+            <div class="text-center mt-12">
+                <a href="features.html" class="inline-flex items-center gap-2 text-navy-800 font-semibold border border-navy-200 hover:border-teal-300 hover:text-teal-700 px-6 py-3 rounded-lg transition">
+                    See the full feature list
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Storefront Blocks Section -->
-    <section id="storefront" class="py-20 md:py-28 bg-navy-50/40 border-y border-navy-100">
+    <!-- ============ STOREFRONT STRIP ============ -->
+    <section class="py-20 md:py-28 bg-navy-50/40 border-y border-navy-100 dot-grid">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 max-w-2xl mx-auto">
-                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Native to your storefront</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Four blocks. Zero code.</h2>
-                <p class="text-xl text-gray-600">Drop them into any Shopify theme. They look like part of your store because they are.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-md transition">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-5 flex items-center justify-center border border-gray-100">
-                        <div class="bg-white rounded-md px-3 py-1.5 shadow-sm border border-gray-200 flex items-center gap-1.5">
-                            <svg class="w-3 h-3 text-teal-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
-                            <span class="text-[11px] font-bold text-navy-900 tracking-wide">MY COURSES</span>
-                        </div>
-                    </div>
-                    <p class="text-[11px] font-semibold uppercase tracking-wider text-teal-600 mb-1">Block 01</p>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">My Courses button</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">A persistent header button. Customers always know where their library lives.</p>
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="reveal">
+                    <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Native to your storefront</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 mb-4 tracking-tight text-balance">It looks like part of your store — because it is.</h2>
+                    <p class="text-lg text-gray-600 mb-6 text-pretty">Drop four theme blocks into any Shopify theme and add checkout extensions in a couple of clicks. No code, no subdomain, no "powered by" badge. Your course pages live on your own domain, in your own theme.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Course catalog, access card, course details &amp; "My courses"</strong> blocks for any page.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Checkout &amp; order-page extensions</strong> route buyers straight into their courses — no shipping language.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">A focused player and exam hall</strong> for distraction-free learning.</span></li>
+                    </ul>
+                    <a href="storefront.html" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:gap-3 transition-all">Explore the storefront experience <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
                 </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-md transition">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-5 flex items-center justify-center border border-gray-100 p-4">
-                        <div class="bg-white rounded-md p-3 shadow-sm border border-teal-300 w-full">
-                            <p class="text-[9px] font-bold text-teal-600 uppercase tracking-wider mb-1">Access card</p>
-                            <p class="text-[11px] text-navy-900 font-semibold">Continue lesson →</p>
-                            <div class="mt-2 h-1 bg-gray-100 rounded-full overflow-hidden"><div class="h-full w-2/5 bg-teal-500 rounded-full"></div></div>
-                        </div>
+                <div class="grid grid-cols-2 gap-4 reveal">
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+                        <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-4 flex items-center justify-center border border-gray-100"><div class="bg-white rounded-md px-3 py-1.5 shadow-sm border border-gray-200 flex items-center gap-1.5"><svg class="w-3 h-3 text-teal-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg><span class="text-[11px] font-bold text-navy-900 tracking-wide">MY COURSES</span></div></div>
+                        <h3 class="text-sm font-semibold text-navy-900">My Courses button</h3>
                     </div>
-                    <p class="text-[11px] font-semibold uppercase tracking-wider text-teal-600 mb-1">Block 02</p>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Access card</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Slots into product pages. "Buy" becomes "Continue" the moment they enroll.</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-md transition">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-5 p-3 grid grid-cols-3 gap-1.5 border border-gray-100">
-                        <div class="rounded bg-gradient-to-br from-teal-300/60 to-teal-500/40"></div>
-                        <div class="rounded bg-gradient-to-br from-navy-300/60 to-navy-500/40"></div>
-                        <div class="rounded bg-gradient-to-br from-amber-300/60 to-amber-500/40"></div>
-                        <div class="rounded bg-gradient-to-br from-rose-300/60 to-rose-500/40"></div>
-                        <div class="rounded bg-gradient-to-br from-teal-300/60 to-navy-500/40"></div>
-                        <div class="rounded bg-gradient-to-br from-emerald-300/60 to-teal-500/40"></div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+                        <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-4 flex items-center justify-center border border-gray-100 p-4"><div class="bg-white rounded-md p-3 shadow-sm border border-teal-300 w-full"><p class="text-[9px] font-bold text-teal-600 uppercase tracking-wider mb-1">Access card</p><p class="text-[11px] text-navy-900 font-semibold">Continue lesson →</p><div class="mt-2 h-1 bg-gray-100 rounded-full overflow-hidden"><div class="h-full w-2/5 bg-teal-500 rounded-full"></div></div></div></div>
+                        <h3 class="text-sm font-semibold text-navy-900">Course access card</h3>
                     </div>
-                    <p class="text-[11px] font-semibold uppercase tracking-wider text-teal-600 mb-1">Block 03</p>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Course catalog</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">A full grid of your courses. Drop it on your homepage or /courses route.</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-md transition">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-5 flex items-center justify-center border border-gray-100 p-4">
-                        <div class="bg-navy-900 rounded-md aspect-video w-full relative flex items-center justify-center">
-                            <div class="w-7 h-7 bg-white rounded-full flex items-center justify-center"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0f2744"><path d="M8 5v14l11-7z"/></svg></div>
-                            <div class="absolute bottom-1.5 left-1.5 right-1.5 h-0.5 bg-white/20 rounded-full"><div class="h-full w-1/2 bg-teal-400 rounded-full"></div></div>
-                        </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+                        <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-4 p-3 grid grid-cols-3 gap-1.5 border border-gray-100"><div class="rounded bg-gradient-to-br from-teal-300/60 to-teal-500/40"></div><div class="rounded bg-gradient-to-br from-navy-300/60 to-navy-500/40"></div><div class="rounded bg-gradient-to-br from-gold-300/60 to-gold-500/40"></div><div class="rounded bg-gradient-to-br from-rose-300/60 to-rose-500/40"></div><div class="rounded bg-gradient-to-br from-teal-300/60 to-navy-500/40"></div><div class="rounded bg-gradient-to-br from-emerald-300/60 to-teal-500/40"></div></div>
+                        <h3 class="text-sm font-semibold text-navy-900">Course catalog</h3>
                     </div>
-                    <p class="text-[11px] font-semibold uppercase tracking-wider text-teal-600 mb-1">Block 04</p>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Course player</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Embed the full course experience on any page of your store.</p>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+                        <div class="aspect-[4/3] bg-gradient-to-br from-navy-50 to-teal-50 rounded-lg mb-4 flex items-center justify-center border border-gray-100 p-4"><div class="bg-navy-900 rounded-md aspect-video w-full relative flex items-center justify-center"><div class="w-7 h-7 bg-white rounded-full flex items-center justify-center"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0f2744"><path d="M8 5v14l11-7z"/></svg></div><div class="absolute bottom-1.5 left-1.5 right-1.5 h-0.5 bg-white/20 rounded-full"><div class="h-full w-1/2 bg-teal-400 rounded-full"></div></div></div></div>
+                        <h3 class="text-sm font-semibold text-navy-900">Course details</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How it Works -->
+    <!-- ============ HOW IT WORKS ============ -->
     <section id="how-it-works" class="py-20 md:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 max-w-2xl mx-auto">
+            <div class="text-center mb-16 max-w-2xl mx-auto reveal">
                 <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">From install to first sale</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Get your school running in minutes.</h2>
-                <p class="text-xl text-gray-600">Four steps. No code. No call required.</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Live before lunch.</h2>
+                <p class="text-xl text-gray-600">Four steps. No code. No onboarding call required.</p>
             </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                <div class="relative">
-                    <div class="w-14 h-14 bg-teal-500 rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">1</div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Install the app</h3>
-                    <p class="text-gray-600 leading-relaxed">One click from the Shopify App Store. No credit card. No setup wizard you'll never finish.</p>
-                </div>
-                <div class="relative">
-                    <div class="w-14 h-14 bg-teal-500 rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">2</div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Build your course</h3>
-                    <p class="text-gray-600 leading-relaxed">Add chapters and lessons. Mix in quizzes, live classes, and assignments. Drag to reorder.</p>
-                </div>
-                <div class="relative">
-                    <div class="w-14 h-14 bg-teal-500 rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">3</div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Connect to a product</h3>
-                    <p class="text-gray-600 leading-relaxed">Link your course to a Shopify product and set the price. Drop the storefront blocks into your theme.</p>
-                </div>
-                <div class="relative">
-                    <div class="w-14 h-14 bg-teal-500 rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">4</div>
-                    <h3 class="text-lg font-semibold text-navy-900 mb-2">Start selling</h3>
-                    <p class="text-gray-600 leading-relaxed">Students get instant access after checkout. You focus on the part only you can do — teaching.</p>
-                </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="reveal"><div class="w-14 h-14 gradient-teal rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">1</div><h3 class="text-lg font-semibold text-navy-900 mb-2">Install the app</h3><p class="text-gray-600 leading-relaxed">One click from the Shopify App Store. No credit card, no setup wizard you'll never finish.</p></div>
+                <div class="reveal"><div class="w-14 h-14 gradient-teal rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">2</div><h3 class="text-lg font-semibold text-navy-900 mb-2">Build your course</h3><p class="text-gray-600 leading-relaxed">Add chapters and lessons. Mix in quizzes, live classes, assignments, and a final exam. Drag to reorder.</p></div>
+                <div class="reveal"><div class="w-14 h-14 gradient-teal rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">3</div><h3 class="text-lg font-semibold text-navy-900 mb-2">Add it to your theme</h3><p class="text-gray-600 leading-relaxed">Publishing auto-creates a Shopify product. Drop the storefront blocks into your theme and set a price.</p></div>
+                <div class="reveal"><div class="w-14 h-14 gradient-teal rounded-2xl flex items-center justify-center mb-5 text-white text-xl font-bold shadow-md shadow-teal-500/30">4</div><h3 class="text-lg font-semibold text-navy-900 mb-2">Start selling</h3><p class="text-gray-600 leading-relaxed">Students get instant access the moment they check out. You focus on the part only you can do — teaching.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 md:py-28 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 max-w-2xl mx-auto">
+    <!-- ============ PRICING TEASER ============ -->
+    <section class="py-20 md:py-28 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 max-w-2xl mx-auto reveal">
                 <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Pricing</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Free to install. We only earn when you sell.</h2>
-                <p class="text-xl text-gray-600">No monthly fee. No setup costs. No hosting bills. No surprise charges.</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Free to install. We only earn when you sell.</h2>
+                <p class="text-xl text-gray-600">No monthly fee. No setup costs. No per-student charges.</p>
             </div>
-
-            <div class="max-w-2xl mx-auto">
-                <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-                    <div class="p-10 text-center border-b border-gray-100 bg-gradient-to-b from-white to-teal-50/40">
-                        <div class="inline-flex items-center gap-2 bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                            Free forever
-                        </div>
-                        <div class="flex items-baseline justify-center gap-2 mb-3">
-                            <span class="text-7xl font-bold text-navy-900">$0</span>
-                            <span class="text-gray-500 text-lg">/month</span>
-                        </div>
-                        <p class="text-lg text-navy-900">Then <span class="font-bold text-teal-600">5%</span> on course sales.</p>
-                        <p class="text-sm text-gray-500 mt-1">That's the whole pricing page.</p>
-                    </div>
-                    <div class="p-10">
-                        <p class="text-xs font-semibold tracking-wider uppercase text-gray-500 mb-4">What's included</p>
-                        <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Unlimited courses</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Unlimited students</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Secure video hosting</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Live classes (Zoom)</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Quizzes &amp; assignments</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Discussion &amp; reviews</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Branded email &amp; push</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">All 4 storefront blocks</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Real-time analytics</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Auto-enrollment</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Native Shopify checkout</span></li>
-                            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700">Email &amp; chat support</span></li>
-                        </ul>
-                        <a href="https://apps.shopify.com/chapters" class="block w-full bg-teal-500 hover:bg-teal-600 text-white text-center py-4 rounded-xl font-semibold transition shadow-md hover:shadow-lg">
-                            Install Free
-                        </a>
-                        <p class="text-center text-xs text-gray-500 mt-4">No setup fees · No hosting bills · No per-student costs · Cancel anytime</p>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-5 reveal">
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">To install</p>
+                    <p class="font-display text-5xl font-bold text-navy-900 mb-2">$0</p>
+                    <p class="text-gray-600 text-sm">Every feature included. Unlimited courses and students.</p>
                 </div>
+                <div class="bg-white rounded-2xl border-2 border-teal-300 p-8 text-center shadow-md relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal-500 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">When you sell</span>
+                    <p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Commission</p>
+                    <p class="font-display text-5xl font-bold text-navy-900 mb-2">5%</p>
+                    <p class="text-gray-600 text-sm">On course &amp; exam sales. If you don't sell, you don't pay.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 text-center shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Video storage</p>
+                    <p class="font-display text-5xl font-bold text-navy-900 mb-2">30&nbsp;GB</p>
+                    <p class="text-gray-600 text-sm">Free, then $4 per extra 25&nbsp;GB / month. Only if you need it.</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="pricing.html" class="inline-flex items-center gap-2 text-navy-800 font-semibold border border-navy-200 hover:border-teal-300 hover:text-teal-700 px-6 py-3 rounded-lg transition">See full pricing details <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 md:py-28 bg-white">
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="py-20 md:py-28 bg-white scroll-mt-20">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">FAQ</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight">Questions, answered.</h2>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight">Questions, answered.</h2>
             </div>
-
             <div class="divide-y divide-gray-200 border-t border-gray-200">
-                <details class="group py-6">
-                    <summary class="flex justify-between items-center cursor-pointer">
-                        <span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">How much does Chapters cost?</span>
-                        <span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Nothing to install. Nothing per month. We take 5% of each course sale — that's the entire pricing model. If you don't sell, you don't pay.</p>
-                </details>
-                <details class="group py-6">
-                    <summary class="flex justify-between items-center cursor-pointer">
-                        <span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Do I need a special Shopify plan?</span>
-                        <span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">No. Chapters works on every Shopify plan, from Basic on up.</p>
-                </details>
-                <details class="group py-6">
-                    <summary class="flex justify-between items-center cursor-pointer">
-                        <span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Can students watch on phones?</span>
-                        <span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Yes. Lessons stream smoothly on phones, tablets, laptops, and TVs. Push notifications keep students coming back, even when the tab is closed.</p>
-                </details>
-                <details class="group py-6">
-                    <summary class="flex justify-between items-center cursor-pointer">
-                        <span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">How are my videos protected?</span>
-                        <span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Every video stream is signed and tied to the enrolled student. No public URLs, no shareable links, no easy leaks.</p>
-                </details>
-                <details class="group py-6">
-                    <summary class="flex justify-between items-center cursor-pointer">
-                        <span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Can I migrate courses from another platform?</span>
-                        <span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Yes. Upload your existing videos and rebuild your structure in minutes. For larger migrations, get in touch and we'll help.</p>
-                </details>
-                <details class="group py-6">
-                    <summary class="flex justify-between items-center cursor-pointer">
-                        <span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Do live classes use my own Zoom account?</span>
-                        <span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Yes. Connect your existing Zoom account (free or paid). Schedule sessions inside Chapters and students join right from their course page.</p>
-                </details>
-                <details class="group py-6">
-                    <summary class="flex justify-between items-center cursor-pointer">
-                        <span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">What happens if I uninstall?</span>
-                        <span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Your course data is exportable for 30 days after uninstall. You keep everything you built; you can re-install anytime.</p>
-                </details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">How much does Chapters cost?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Free to install — no monthly fee. We take a 5% commission on each course or exam sale. Every merchant also gets 30&nbsp;GB of free video storage; if you need more it's $4 per extra 25&nbsp;GB per month. <a href="pricing.html" class="text-teal-600 underline">See full pricing</a>.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Do I need a special Shopify plan?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">No. Chapters works on every Shopify plan, from Basic on up. Courses are sold through your normal Shopify checkout.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">How are my videos protected?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Lessons stream from a global CDN behind signed, expiring playback links — there are no public URLs to copy and paste. You can also switch on a screen watermark and download deterrents per course to discourage casual sharing.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Can I sell exams and certificates too?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Yes. Exams can be a final step inside a course or sold standalone as their own product, with timed sittings and paid retakes. Certificates can be free or paid, and are issued automatically on completion. <a href="exams.html" class="text-teal-600 underline">Exams</a> · <a href="certificates.html" class="text-teal-600 underline">Certificates</a>.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Do live classes use my own Zoom account?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Yes. Connect your existing Zoom account (free or paid), schedule sessions inside Chapters, and students join from their lesson page. <a href="zoom-setup.html" class="text-teal-600 underline">See the Zoom setup guide</a>.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Can students watch on their phones?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Yes. The student portal works on phones, tablets, and laptops, and can be installed to the home screen as an app (PWA). Push and email reminders bring students back even when the tab is closed.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">What happens to my data if I uninstall?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Chapters is GDPR-compliant and supports Shopify's data export and erasure flows. If you reinstall within about 48 hours your data is still there; after that, your shop's data is deleted per our Privacy Policy. You keep everything you built and can export it.</p></details>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- ============ CTA ============ -->
     <section class="gradient-bg hero-pattern py-20 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-5 tracking-tight text-balance">Ready to start teaching?</h2>
-            <p class="text-xl text-navy-100 mb-8 max-w-xl mx-auto">Install Chapters free from the Shopify App Store. Be live before lunch.</p>
+            <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-5 tracking-tight text-balance">Ready to start teaching?</h2>
+            <p class="text-xl text-navy-100 mb-8 max-w-xl mx-auto">Install Chapters free from the Shopify App Store. Build your first course today.</p>
             <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg hover:shadow-xl">
                 Install Free
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
             <p class="text-sm text-navy-200 mt-5">Free to install · No monthly fee · 5% only when you sell</p>
+            <p class="text-sm text-navy-200 mt-3">Questions first? Email <a href="mailto:chapters@pixipace.com" class="text-teal-300 underline hover:text-teal-200">chapters@pixipace.com</a></p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ============ FOOTER ============ -->
     <footer class="bg-navy-900 text-gray-400 py-14">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-10">
-                <div>
-                    <img src="assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert">
-                    <p class="text-sm leading-relaxed">Sell online courses directly from your Shopify store.</p>
+            <div class="grid md:grid-cols-5 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert" width="160" height="56">
+                    <p class="text-sm leading-relaxed max-w-xs">Sell courses, exams, and certificates — and host live classes — directly from your Shopify store.</p>
+                    <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 mt-5 bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-lg text-sm font-semibold transition border border-white/15">Install on Shopify</a>
                 </div>
                 <div>
                     <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#features" class="hover:text-teal-400 transition">Features</a></li>
-                        <li><a href="#storefront" class="hover:text-teal-400 transition">Storefront blocks</a></li>
-                        <li><a href="#how-it-works" class="hover:text-teal-400 transition">How it works</a></li>
-                        <li><a href="#pricing" class="hover:text-teal-400 transition">Pricing</a></li>
-                        <li><a href="#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="courses.html" class="hover:text-teal-400 transition">Courses &amp; video</a></li>
+                        <li><a href="exams.html" class="hover:text-teal-400 transition">Examinations</a></li>
+                        <li><a href="certificates.html" class="hover:text-teal-400 transition">Certificates</a></li>
+                        <li><a href="live-classes.html" class="hover:text-teal-400 transition">Live classes</a></li>
+                        <li><a href="storefront.html" class="hover:text-teal-400 transition">Sell on Shopify</a></li>
+                        <li><a href="engagement.html" class="hover:text-teal-400 transition">Engage &amp; grow</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-semibold mb-4 text-sm">Legal</h4>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Resources</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
+                        <li><a href="features.html" class="hover:text-teal-400 transition">All features</a></li>
+                        <li><a href="pricing.html" class="hover:text-teal-400 transition">Pricing</a></li>
+                        <li><a href="index.html#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="zoom-setup.html" class="hover:text-teal-400 transition">Zoom setup guide</a></li>
+                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
                     </ul>
                 </div>
                 <div>
@@ -582,15 +435,17 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="https://www.pixipace.com" class="hover:text-teal-400 transition">Pixipace</a></li>
                         <li><a href="mailto:chapters@pixipace.com" class="hover:text-teal-400 transition">chapters@pixipace.com</a></li>
-                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
-                <p class="text-sm">&copy; 2026 Pixipace. All rights reserved.</p>
+                <p class="text-sm">&copy; <span data-year>2026</span> Pixipace. All rights reserved.</p>
                 <p class="text-sm">Free to install · 5% only when you sell</p>
             </div>
         </div>
     </footer>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

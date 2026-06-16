@@ -119,16 +119,34 @@ Click the **"Use this template"** button at the top of this repository to create
 
 ```
 chapters-landing/
-├── index.html          # Main landing page
-├── privacy.html        # Privacy policy page
-├── terms.html          # Terms of service page
+├── index.html           # Home
+├── features.html        # All features (hub)
+├── pricing.html         # Pricing detail
+├── courses.html         # Courses & video deep-dive
+├── exams.html           # Examinations deep-dive
+├── certificates.html    # Certificates deep-dive
+├── live-classes.html    # Live classes deep-dive
+├── storefront.html      # Sell on Shopify deep-dive
+├── engagement.html      # Engage & grow deep-dive
+├── privacy.html         # Privacy policy
+├── terms.html           # Terms of service
+├── zoom-setup.html      # Zoom integration guide
+├── robots.txt           # Crawler directives
+├── sitemap.xml          # Sitemap
 ├── assets/
-│   ├── favicon.png     # Browser favicon
-│   ├── logo.svg        # Brand logo
-│   └── icon.svg        # App icon
-├── LICENSE             # MIT License
-└── README.md           # Documentation
+│   ├── favicon.png      # Browser favicon
+│   ├── logo.svg         # Brand wordmark
+│   ├── icon.svg         # App icon ("C" mark)
+│   ├── og-image.png     # Social share image (1200×630)
+│   ├── og-image.svg     # Source for og-image.png
+│   ├── site.css         # Shared styles (gradients, fonts, reveal, prose)
+│   └── site.js          # Shared behaviour (mobile nav, reveal-on-scroll, year)
+├── LICENSE              # MIT License
+└── README.md            # Documentation
 ```
+
+Every page shares one `<head>` (Tailwind CDN config + Inter/Fraunces fonts + `assets/site.css`),
+one fixed nav with a Features dropdown, and one footer — keep these blocks identical across pages.
 
 ---
 
@@ -165,9 +183,18 @@ Edit `index.html` to customize:
 
 | Page | Description |
 |------|-------------|
-| `index.html` | Main landing page with all sections |
-| `privacy.html` | GDPR-compliant privacy policy |
-| `terms.html` | Terms of service document |
+| `index.html` | Home — hero, six product pillars, storefront, how-it-works, pricing teaser, FAQ |
+| `features.html` | Full feature hub, grouped by pillar |
+| `pricing.html` | Free + 5% commission + optional storage, with examples and FAQ |
+| `courses.html` | Course builder, secure video, player, quizzes & assignments |
+| `exams.html` | Examinations — exam hall, question types, timed sittings, paid retakes |
+| `certificates.html` | Branded, verifiable PDF certificates |
+| `live-classes.html` | Live classes via Zoom |
+| `storefront.html` | Native Shopify selling, blocks, auto-enrollment, branding |
+| `engagement.html` | Q&A, reviews, email, push, PWA, analytics |
+| `privacy.html` | Privacy policy |
+| `terms.html` | Terms of service |
+| `zoom-setup.html` | Zoom integration setup & usage guide |
 
 ---
 

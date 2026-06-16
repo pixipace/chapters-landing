@@ -1,242 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js-off">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Chapters by Pixipace</title>
-    <meta name="description" content="Terms of Service for Chapters - the Shopify app for selling online courses.">
+    <title>Terms of Service — Chapters by Pixipace</title>
+    <meta name="description" content="The terms governing use of the Chapters app for selling courses, exams, and certificates on Shopify.">
+    <link rel="canonical" href="https://chapters.pixipace.com/terms.html">
+    <meta name="theme-color" content="#16376d">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chapters">
+    <meta property="og:title" content="Terms of Service — Chapters by Pixipace">
+    <meta property="og:description" content="The terms governing use of the Chapters app for selling courses, exams, and certificates on Shopify.">
+    <meta property="og:image" content="https://chapters.pixipace.com/assets/og-image.png">
+    <meta property="og:url" content="https://chapters.pixipace.com/terms.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terms of Service — Chapters by Pixipace">
+    <meta name="twitter:description" content="The terms governing use of the Chapters app for selling courses, exams, and certificates on Shopify.">
+    <meta name="twitter:image" content="https://chapters.pixipace.com/assets/og-image.png">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'Georgia', 'serif'],
+                    },
                     colors: {
-                        navy: {
-                            800: '#16376d',
-                            900: '#0f2744',
-                        },
-                        teal: {
-                            500: '#25ad9f',
-                            600: '#199473',
-                        }
+                        navy: { 50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#16376d',900:'#0f2744' },
+                        teal: { 50:'#effcf6',100:'#c6f7e2',200:'#8eedc7',300:'#65d6ad',400:'#3ebd93',500:'#25ad9f',600:'#199473',700:'#147d64',800:'#0c6b58',900:'#014d40' },
+                        gold: { 50:'#fbf7ee',100:'#f5ebd0',200:'#e9d4a0',300:'#dcbb6e',400:'#cfa548',500:'#c79a3a',600:'#a87d2c',700:'#855f24' },
                     }
                 }
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Terms of Service",
+      "description": "The terms governing use of the Chapters app for selling courses, exams, and certificates on Shopify.",
+      "publisher": { "@type": "Organization", "name": "Pixipace", "url": "https://www.pixipace.com" },
+      "url": "https://chapters.pixipace.com/terms.html"
+    }
+    </script>
 </head>
-<body class="font-sans antialiased bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-gray-100">
+<body class="antialiased text-navy-900 bg-white">
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="siteNav" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center">
-                    <img src="assets/logo.svg" alt="Chapters" class="h-8">
+                <a href="/" class="flex items-center" aria-label="Chapters home">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8" width="160" height="56">
                 </a>
-                <a href="/" class="text-gray-600 hover:text-navy-800 transition">Back to Home</a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <div class="relative group">
+                        <a href="features.html" class="flex items-center gap-1 text-gray-600 hover:text-navy-800 transition font-medium py-5">
+                            Features
+                            <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[34rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 pt-2">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                                <a href="courses.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Courses &amp; video</span><span class="block text-xs text-gray-500 mt-0.5">Builder, secure player, quizzes</span></span>
+                                </a>
+                                <a href="exams.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Examinations</span><span class="block text-xs text-gray-500 mt-0.5">Timed, randomized, paid retakes</span></span>
+                                </a>
+                                <a href="certificates.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Certificates</span><span class="block text-xs text-gray-500 mt-0.5">Branded PDFs, public verify</span></span>
+                                </a>
+                                <a href="live-classes.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Live classes</span><span class="block text-xs text-gray-500 mt-0.5">Zoom, scheduled in-lesson</span></span>
+                                </a>
+                                <a href="storefront.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Sell on Shopify</span><span class="block text-xs text-gray-500 mt-0.5">Blocks, checkout, auto-enroll</span></span>
+                                </a>
+                                <a href="engagement.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Engage &amp; grow</span><span class="block text-xs text-gray-500 mt-0.5">Q&amp;A, email, push, insights</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
+                    <a href="index.html#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://apps.shopify.com/chapters" class="hidden sm:inline-flex bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
+                        Install Free
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-navy-900" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <p class="px-3 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Features</p>
+                <a href="courses.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Courses &amp; video</a>
+                <a href="exams.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Examinations</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Certificates</a>
+                <a href="live-classes.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Live classes</a>
+                <a href="storefront.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Sell on Shopify</a>
+                <a href="engagement.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Engage &amp; grow</a>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <a href="features.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">All features</a>
+                <a href="pricing.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Pricing</a>
+                <a href="index.html#faq" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">FAQ</a>
+                <a href="https://apps.shopify.com/chapters" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white text-center px-5 py-3 rounded-lg font-semibold transition">Install Free</a>
             </div>
         </div>
     </nav>
 
-    <!-- Content -->
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
-            <h1 class="text-3xl md:text-4xl font-bold text-navy-800 mb-2">Terms of Service</h1>
-            <p class="text-gray-500 mb-8">Last updated: May 13, 2026</p>
+    <!-- ============ PAGE HEADER ============ -->
+    <header class="pt-28 pb-10 md:pt-32 md:pb-12 bg-navy-50/40 border-b border-navy-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-navy-900 tracking-tight">Terms of Service</h1>
+            <p class="text-sm text-gray-500 mt-3">Last updated: May 13, 2026</p>
+        </div>
+    </header>
 
-            <div class="prose prose-lg max-w-none text-gray-700">
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">1. Agreement to Terms</h2>
-                    <p class="mb-4">
-                        By installing or using Chapters ("the App"), you agree to be bound by these Terms of Service ("Terms"). The App is provided by Pixipace ("we", "us", or "our").
-                    </p>
-                    <p>
-                        If you do not agree to these Terms, do not install or use the App. These Terms apply to all users of the App, including merchants and their customers.
-                    </p>
-                </section>
+    <!-- ============ CONTENT ============ -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div class="prose-chapters max-w-none">
+            <h2>1. Agreement to Terms</h2>
+            <p>By installing or using Chapters ("the App"), you agree to be bound by these Terms of Service ("Terms"). The App is provided by Pixipace ("we", "us", or "our").</p>
+            <p>If you do not agree to these Terms, do not install or use the App. These Terms apply to all users of the App, including merchants and their customers.</p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">2. Description of Service</h2>
-                    <p class="mb-4">
-                        Chapters is a Shopify application that enables merchants to:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li>Create and organize online video courses</li>
-                        <li>Host and stream video content securely</li>
-                        <li>Sell courses through Shopify's checkout</li>
-                        <li>Automatically enroll customers upon purchase</li>
-                        <li>Track student progress and analytics</li>
-                        <li>Provide customers with a learning portal</li>
-                    </ul>
-                </section>
+            <h2>2. Description of Service</h2>
+            <p>Chapters is a Shopify application that enables merchants to:</p>
+            <ul>
+                <li>Create and organize online video courses</li>
+                <li>Host and stream video content securely</li>
+                <li>Sell courses through Shopify's checkout</li>
+                <li>Automatically enroll customers upon purchase</li>
+                <li>Create and administer examinations and assessments, including timed sittings and paid retakes</li>
+                <li>Issue branded certificates to students on completion</li>
+                <li>Schedule and host live classes via Zoom</li>
+                <li>Track student progress and analytics</li>
+                <li>Provide customers with a learning portal</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">3. Account Requirements</h2>
-                    <p class="mb-4">To use Chapters, you must:</p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li>Have an active Shopify store</li>
-                        <li>Be at least 18 years old or the age of majority in your jurisdiction</li>
-                        <li>Provide accurate and complete information</li>
-                        <li>Maintain the security of your account credentials</li>
-                        <li>Accept responsibility for all activities under your account</li>
-                    </ul>
-                </section>
+            <h2>3. Account Requirements</h2>
+            <p>To use Chapters, you must:</p>
+            <ul>
+                <li>Have an active Shopify store</li>
+                <li>Be at least 18 years old or the age of majority in your jurisdiction</li>
+                <li>Provide accurate and complete information</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Accept responsibility for all activities under your account</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">4. Acceptable Use</h2>
-                    <p class="mb-4">You agree NOT to use the App to:</p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li>Upload or distribute content that infringes intellectual property rights</li>
-                        <li>Distribute malware, viruses, or harmful code</li>
-                        <li>Engage in fraudulent or deceptive practices</li>
-                        <li>Violate any applicable laws or regulations</li>
-                        <li>Upload illegal, harmful, or offensive content</li>
-                        <li>Attempt to gain unauthorized access to our systems</li>
-                        <li>Resell or redistribute the App without authorization</li>
-                        <li>Use the App for any purpose other than its intended use</li>
-                    </ul>
-                </section>
+            <h2>4. Acceptable Use</h2>
+            <p>You agree NOT to use the App to:</p>
+            <ul>
+                <li>Upload or distribute content that infringes intellectual property rights</li>
+                <li>Distribute malware, viruses, or harmful code</li>
+                <li>Engage in fraudulent or deceptive practices</li>
+                <li>Violate any applicable laws or regulations</li>
+                <li>Upload illegal, harmful, or offensive content</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Resell or redistribute the App without authorization</li>
+                <li>Use the App for any purpose other than its intended use</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">5. Content Ownership</h2>
+            <h2>5. Content Ownership</h2>
+            <h3>5.1 Your Content</h3>
+            <p>You retain all rights to the content you create and upload to Chapters, including course materials, videos, and descriptions. By uploading content, you grant us a limited license to store, display, and transmit your content solely for the purpose of operating the App.</p>
+            <h3>5.2 Our Content</h3>
+            <p>The App, including its design, features, and documentation, is owned by Pixipace and protected by intellectual property laws. You may not copy, modify, or distribute any part of the App without our written consent.</p>
 
-                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">5.1 Your Content</h3>
-                    <p class="mb-4">
-                        You retain all rights to the content you create and upload to Chapters, including course materials, videos, and descriptions. By uploading content, you grant us a limited license to store, display, and transmit your content solely for the purpose of operating the App.
-                    </p>
+            <h2>6. Payment and Billing</h2>
+            <p>Chapters is free to install. Instead of a monthly subscription fee, our charges work as follows:</p>
+            <ul>
+                <li>We charge a <strong>5% commission</strong> on course, exam, retake, and paid-certificate sales.</li>
+                <li>An optional <strong>video-storage add-on</strong> is available at $4 per 25 GB per month for storage used beyond the included 30 GB.</li>
+                <li>All charges are billed through Shopify's app-billing system and appear on your Shopify invoice.</li>
+                <li>Shopify's own payment-processing fees are separate and are not included in our charges.</li>
+                <li>Pricing is subject to change with 30 days notice.</li>
+                <li>Refunds are handled according to Shopify's app billing policies.</li>
+                <li>You are responsible for any applicable taxes.</li>
+                <li>Failure to pay may result in service suspension.</li>
+            </ul>
+            <p>There is no monthly subscription fee for using Chapters.</p>
 
-                    <h3 class="text-lg font-medium text-navy-800 mb-2 mt-4">5.2 Our Content</h3>
-                    <p class="mb-4">
-                        The App, including its design, features, and documentation, is owned by Pixipace and protected by intellectual property laws. You may not copy, modify, or distribute any part of the App without our written consent.
-                    </p>
-                </section>
+            <h2>7. Third-Party Services</h2>
+            <p>Chapters integrates with third-party services:</p>
+            <ul>
+                <li><strong>Shopify:</strong> Platform integration, governed by Shopify's terms</li>
+                <li><strong>Bunny.net:</strong> Video hosting and streaming services</li>
+            </ul>
+            <p>We are not responsible for the availability, reliability, or policies of third-party services. Your use of these services is subject to their respective terms.</p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">6. Payment and Billing</h2>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li>Subscription fees are billed through Shopify's billing system</li>
-                        <li>Prices are subject to change with 30 days notice</li>
-                        <li>Refunds are handled according to Shopify's app billing policies</li>
-                        <li>You are responsible for any applicable taxes</li>
-                        <li>Failure to pay may result in service suspension</li>
-                    </ul>
-                </section>
+            <h2>8. Service Availability</h2>
+            <p>We strive to maintain high availability but do not guarantee uninterrupted service. We may:</p>
+            <ul>
+                <li>Perform scheduled maintenance with reasonable notice</li>
+                <li>Experience temporary outages due to circumstances beyond our control</li>
+                <li>Modify or discontinue features with reasonable notice</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">7. Third-Party Services</h2>
-                    <p class="mb-4">
-                        Chapters integrates with third-party services:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li><strong>Shopify:</strong> Platform integration, governed by Shopify's terms</li>
-                        <li><strong>Bunny.net:</strong> Video hosting and streaming services</li>
-                    </ul>
-                    <p>
-                        We are not responsible for the availability, reliability, or policies of third-party services. Your use of these services is subject to their respective terms.
-                    </p>
-                </section>
+            <h2>9. Limitation of Liability</h2>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
+            <ul>
+                <li>THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND</li>
+                <li>WE DISCLAIM ALL IMPLIED WARRANTIES, INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</li>
+                <li>WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES</li>
+                <li>OUR TOTAL LIABILITY SHALL NOT EXCEED THE FEES PAID BY YOU IN THE PAST 12 MONTHS</li>
+            </ul>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">8. Service Availability</h2>
-                    <p class="mb-4">
-                        We strive to maintain high availability but do not guarantee uninterrupted service. We may:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li>Perform scheduled maintenance with reasonable notice</li>
-                        <li>Experience temporary outages due to circumstances beyond our control</li>
-                        <li>Modify or discontinue features with reasonable notice</li>
-                    </ul>
-                </section>
+            <h2>10. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless Pixipace, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of the App, your content, or your violation of these Terms.</p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">9. Limitation of Liability</h2>
-                    <p class="mb-4">
-                        TO THE MAXIMUM EXTENT PERMITTED BY LAW:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li>THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND</li>
-                        <li>WE DISCLAIM ALL IMPLIED WARRANTIES, INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</li>
-                        <li>WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES</li>
-                        <li>OUR TOTAL LIABILITY SHALL NOT EXCEED THE FEES PAID BY YOU IN THE PAST 12 MONTHS</li>
-                    </ul>
-                </section>
+            <h2>11. Termination</h2>
+            <p>Either party may terminate this agreement at any time:</p>
+            <ul>
+                <li><strong>By You:</strong> Uninstall the App from your Shopify store</li>
+                <li><strong>By Us:</strong> Suspend or terminate access for Terms violations</li>
+            </ul>
+            <p>Upon termination, your access to the App will cease, and your data will be deleted according to our Privacy Policy.</p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">10. Indemnification</h2>
-                    <p>
-                        You agree to indemnify and hold harmless Pixipace, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of the App, your content, or your violation of these Terms.
-                    </p>
-                </section>
+            <h2>12. Dispute Resolution</h2>
+            <p>Any disputes arising from these Terms shall be resolved through:</p>
+            <ol>
+                <li>Good faith negotiation between the parties</li>
+                <li>Mediation if negotiation fails</li>
+                <li>Binding arbitration as a last resort</li>
+            </ol>
+            <p>These Terms are governed by the laws of the jurisdiction where Pixipace is registered.</p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">11. Termination</h2>
-                    <p class="mb-4">
-                        Either party may terminate this agreement at any time:
-                    </p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li><strong>By You:</strong> Uninstall the App from your Shopify store</li>
-                        <li><strong>By Us:</strong> Suspend or terminate access for Terms violations</li>
-                    </ul>
-                    <p>
-                        Upon termination, your access to the App will cease, and your data will be deleted according to our Privacy Policy.
-                    </p>
-                </section>
+            <h2>13. Changes to Terms</h2>
+            <p>We may update these Terms from time to time. We will notify you of significant changes through the App or via email. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">12. Dispute Resolution</h2>
-                    <p class="mb-4">
-                        Any disputes arising from these Terms shall be resolved through:
-                    </p>
-                    <ol class="list-decimal pl-6 mb-4 space-y-1">
-                        <li>Good faith negotiation between the parties</li>
-                        <li>Mediation if negotiation fails</li>
-                        <li>Binding arbitration as a last resort</li>
-                    </ol>
-                    <p>
-                        These Terms are governed by the laws of the jurisdiction where Pixipace is registered.
-                    </p>
-                </section>
+            <h2>14. Severability</h2>
+            <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
 
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">13. Changes to Terms</h2>
-                    <p>
-                        We may update these Terms from time to time. We will notify you of significant changes through the App or via email. Continued use of the App after changes constitutes acceptance of the updated Terms.
-                    </p>
-                </section>
-
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">14. Severability</h2>
-                    <p>
-                        If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
-                    </p>
-                </section>
-
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-navy-800 mb-4">15. Contact Information</h2>
-                    <p class="mb-4">For questions about these Terms, please contact us:</p>
-                    <ul class="list-none space-y-2">
-                        <li><strong>Company:</strong> Pixipace</li>
-                        <li><strong>Email:</strong> <a href="mailto:chapters@pixipace.com" class="text-teal-600 hover:text-teal-700">chapters@pixipace.com</a></li>
-                        <li><strong>Website:</strong> <a href="https://www.pixipace.com" class="text-teal-600 hover:text-teal-700">www.pixipace.com</a></li>
-                    </ul>
-                </section>
-            </div>
-        </article>
+            <h2>15. Contact Information</h2>
+            <p>For questions about these Terms, please contact us:</p>
+            <ul>
+                <li><strong>Company:</strong> Pixipace</li>
+                <li><strong>Email:</strong> <a href="mailto:chapters@pixipace.com">chapters@pixipace.com</a></li>
+                <li><strong>Website:</strong> <a href="https://www.pixipace.com">www.pixipace.com</a></li>
+            </ul>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-navy-900 text-gray-400 py-8">
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-navy-900 text-gray-400 py-14">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm">&copy; 2024 Pixipace. All rights reserved.</p>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="privacy.html" class="text-sm hover:text-white transition">Privacy Policy</a>
-                    <a href="terms.html" class="text-sm hover:text-white transition">Terms of Service</a>
-                    <a href="https://www.pixipace.com" class="text-sm hover:text-white transition">Pixipace</a>
+            <div class="grid md:grid-cols-5 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert" width="160" height="56">
+                    <p class="text-sm leading-relaxed max-w-xs">Sell courses, exams, and certificates — and host live classes — directly from your Shopify store.</p>
+                    <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 mt-5 bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-lg text-sm font-semibold transition border border-white/15">Install on Shopify</a>
                 </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="courses.html" class="hover:text-teal-400 transition">Courses &amp; video</a></li>
+                        <li><a href="exams.html" class="hover:text-teal-400 transition">Examinations</a></li>
+                        <li><a href="certificates.html" class="hover:text-teal-400 transition">Certificates</a></li>
+                        <li><a href="live-classes.html" class="hover:text-teal-400 transition">Live classes</a></li>
+                        <li><a href="storefront.html" class="hover:text-teal-400 transition">Sell on Shopify</a></li>
+                        <li><a href="engagement.html" class="hover:text-teal-400 transition">Engage &amp; grow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-teal-400 transition">All features</a></li>
+                        <li><a href="pricing.html" class="hover:text-teal-400 transition">Pricing</a></li>
+                        <li><a href="index.html#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="zoom-setup.html" class="hover:text-teal-400 transition">Zoom setup guide</a></li>
+                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.pixipace.com" class="hover:text-teal-400 transition">Pixipace</a></li>
+                        <li><a href="mailto:chapters@pixipace.com" class="hover:text-teal-400 transition">chapters@pixipace.com</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-sm">&copy; <span data-year>2026</span> Pixipace. All rights reserved.</p>
+                <p class="text-sm">Free to install · 5% only when you sell</p>
             </div>
         </div>
     </footer>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

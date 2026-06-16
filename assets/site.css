@@ -1,0 +1,112 @@
+/* ============================================================
+   Chapters — shared site styles
+   Loaded on every page after the Tailwind CDN + inline config.
+   Keep ONLY things Tailwind utilities can't express cleanly:
+   fonts, gradients, keyframes, reveal-on-scroll, prose tweaks.
+   ============================================================ */
+
+:root {
+  --navy-900: #0f2744;
+  --navy-800: #16376d;
+  --navy-700: #334e68;
+  --teal-600: #199473;
+  --teal-500: #25ad9f;
+  --teal-400: #3ebd93;
+  --teal-300: #65d6ad;
+  --paper:    #fbfaf7; /* warm academy paper */
+  --gold-500: #c79a3a;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Serif display for editorial headlines — the "academy" voice. */
+.font-display {
+  font-family: 'Fraunces', 'Georgia', serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+.text-balance { text-wrap: balance; }
+.text-pretty  { text-wrap: pretty; }
+
+/* ---- Brand gradients & textures ----
+   NOTE: keep background-color + background-image (not the `background`
+   shorthand) so a sibling .hero-pattern rule can't wipe the gradient.
+   The combined `.gradient-bg.hero-pattern` rule (two-class specificity)
+   layers the dotted texture ON TOP of the gradient regardless of order. */
+.gradient-bg {
+  background-color: #0f2744;
+  background-image: linear-gradient(135deg, #0f2744 0%, #16376d 58%, #1e4a8f 100%);
+}
+.gradient-teal {
+  background-color: #0c6b58;
+  background-image: linear-gradient(135deg, #0c6b58 0%, #199473 55%, #25ad9f 100%);
+}
+.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2325ad9f' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.gradient-bg.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2325ad9f' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #0f2744 0%, #16376d 58%, #1e4a8f 100%);
+}
+.gradient-teal.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2325ad9f' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #0c6b58 0%, #199473 55%, #25ad9f 100%);
+}
+/* Subtle dotted grid for light editorial sections */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(22,55,109,0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.paper-bg { background-color: var(--paper); }
+
+/* ---- Live dot ---- */
+@keyframes liveDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.55; transform: scale(1.35); }
+}
+.live-dot { animation: liveDot 1.6s ease-in-out infinite; transform-origin: center; }
+
+/* ---- FAQ accordion ---- */
+details summary::-webkit-details-marker { display: none; }
+details summary { list-style: none; }
+details[open] .faq-toggle { transform: rotate(45deg); }
+.faq-toggle { transition: transform 0.25s ease; }
+
+/* ---- Card lift ---- */
+.card-lift { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.card-lift:hover { transform: translateY(-3px); }
+
+/* ---- Reveal on scroll (progressive enhancement) ---- */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+.js-off .reveal { opacity: 1; transform: none; } /* safety if JS disabled */
+
+/* ---- Mobile nav ---- */
+#mobileMenu { display: none; }
+#mobileMenu.open { display: block; }
+
+/* ---- Long-form / legal prose ---- */
+.prose-chapters { color: #374151; line-height: 1.75; }
+.prose-chapters h2 { color: var(--navy-800); font-weight: 700; font-size: 1.4rem; margin: 2rem 0 .9rem; }
+.prose-chapters h3 { color: var(--navy-800); font-weight: 600; font-size: 1.12rem; margin: 1.6rem 0 .6rem; }
+.prose-chapters p  { margin-bottom: 1rem; }
+.prose-chapters ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1rem; }
+.prose-chapters ol { list-style: decimal; padding-left: 1.4rem; margin-bottom: 1rem; }
+.prose-chapters li { margin-bottom: .4rem; }
+.prose-chapters a  { color: var(--teal-600); text-decoration: underline; }
+.prose-chapters strong { color: var(--navy-900); }
+.prose-chapters code { background:#f1f5f9; padding:.1rem .35rem; border-radius:.3rem; font-size:.92em; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}

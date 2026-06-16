@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" class="js-off">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Builder &amp; Secure Video — Chapters for Shopify</title>
+    <meta name="description" content="Build video courses with a drag-and-drop chapter/lesson builder, token-protected streaming, 7 quiz question types, drip scheduling, and completion gates.">
+    <link rel="canonical" href="https://chapters.pixipace.com/courses.html">
+    <meta name="theme-color" content="#16376d">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chapters">
+    <meta property="og:title" content="Course builder &amp; secure video — Chapters for Shopify">
+    <meta property="og:description" content="A drag-and-drop course builder, token-protected streaming, 7 quiz question types, drip scheduling, and completion gates — native to Shopify.">
+    <meta property="og:image" content="https://chapters.pixipace.com/assets/og-image.png">
+    <meta property="og:url" content="https://chapters.pixipace.com/courses.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Course builder &amp; secure video — Chapters for Shopify">
+    <meta name="twitter:description" content="Drag-and-drop builder, token-protected streaming, quizzes, drip scheduling, and completion gates — native to Shopify.">
+    <meta name="twitter:image" content="https://chapters.pixipace.com/assets/og-image.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        navy: { 50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#16376d',900:'#0f2744' },
+                        teal: { 50:'#effcf6',100:'#c6f7e2',200:'#8eedc7',300:'#65d6ad',400:'#3ebd93',500:'#25ad9f',600:'#199473',700:'#147d64',800:'#0c6b58',900:'#014d40' },
+                        gold: { 50:'#fbf7ee',100:'#f5ebd0',200:'#e9d4a0',300:'#dcbb6e',400:'#cfa548',500:'#c79a3a',600:'#a87d2c',700:'#855f24' },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Course Builder & Secure Video — Chapters for Shopify",
+      "description": "Build video courses with a drag-and-drop chapter/lesson builder, token-protected streaming, 7 quiz question types, drip scheduling, and completion gates.",
+      "url": "https://chapters.pixipace.com/courses.html",
+      "isPartOf": { "@type": "WebSite", "name": "Chapters", "url": "https://chapters.pixipace.com/" },
+      "publisher": { "@type": "Organization", "name": "Pixipace", "url": "https://www.pixipace.com" }
+    }
+    </script>
+</head>
+<body class="antialiased text-navy-900 bg-white">
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="siteNav" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center" aria-label="Chapters home">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8" width="160" height="56">
+                </a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <div class="relative group">
+                        <a href="features.html" class="flex items-center gap-1 text-gray-600 hover:text-navy-800 transition font-medium py-5">
+                            Features
+                            <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[34rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 pt-2">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                                <a href="courses.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Courses &amp; video</span><span class="block text-xs text-gray-500 mt-0.5">Builder, secure player, quizzes</span></span>
+                                </a>
+                                <a href="exams.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Examinations</span><span class="block text-xs text-gray-500 mt-0.5">Timed, randomized, paid retakes</span></span>
+                                </a>
+                                <a href="certificates.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Certificates</span><span class="block text-xs text-gray-500 mt-0.5">Branded PDFs, public verify</span></span>
+                                </a>
+                                <a href="live-classes.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Live classes</span><span class="block text-xs text-gray-500 mt-0.5">Zoom, scheduled in-lesson</span></span>
+                                </a>
+                                <a href="storefront.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Sell on Shopify</span><span class="block text-xs text-gray-500 mt-0.5">Blocks, checkout, auto-enroll</span></span>
+                                </a>
+                                <a href="engagement.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Engage &amp; grow</span><span class="block text-xs text-gray-500 mt-0.5">Q&amp;A, email, push, insights</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
+                    <a href="index.html#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://apps.shopify.com/chapters" class="hidden sm:inline-flex bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
+                        Install Free
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-navy-900" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <p class="px-3 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Features</p>
+                <a href="courses.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Courses &amp; video</a>
+                <a href="exams.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Examinations</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Certificates</a>
+                <a href="live-classes.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Live classes</a>
+                <a href="storefront.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Sell on Shopify</a>
+                <a href="engagement.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Engage &amp; grow</a>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <a href="features.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">All features</a>
+                <a href="pricing.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Pricing</a>
+                <a href="index.html#faq" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">FAQ</a>
+                <a href="https://apps.shopify.com/chapters" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white text-center px-5 py-3 rounded-lg font-semibold transition">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="gradient-bg hero-pattern pt-28 pb-20 md:pt-36 md:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-200 text-xs font-semibold tracking-wide uppercase mb-6 border border-teal-400/30">
+                        Build &amp; teach
+                    </span>
+                    <h1 class="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.05] tracking-tight mb-6 text-balance">
+                        Build courses students<br>
+                        actually <span class="text-teal-300">finish.</span>
+                    </h1>
+                    <p class="text-xl text-navy-100 mb-8 max-w-xl leading-relaxed text-pretty">
+                        A drag-and-drop builder for chapters and lessons, video streamed behind short-lived signed links, and assessments that grade themselves. Plan the path, protect the work, and keep students moving.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://apps.shopify.com/chapters" class="bg-teal-500 hover:bg-teal-400 text-white px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
+                            Install Free
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="pricing.html" class="bg-white/10 hover:bg-white/15 text-white px-7 py-3.5 rounded-lg font-semibold text-base transition border border-white/20 inline-flex items-center justify-center">
+                            See pricing
+                        </a>
+                    </div>
+                    <p class="text-sm text-navy-200 mt-6 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-teal-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Free to install · No monthly fee · 5% only when you sell
+                    </p>
+                </div>
+
+                <!-- Hero Mockup -->
+                <div class="relative reveal">
+                    <div class="rounded-2xl bg-navy-900/60 border border-white/10 overflow-hidden shadow-2xl backdrop-blur-sm">
+                        <div class="flex items-center gap-1.5 px-4 h-9 border-b border-white/5 bg-navy-900/80">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
+                            <div class="ml-3 px-3 py-1 rounded-md bg-white/5 text-[10px] text-white/40 font-mono">Course builder</div>
+                        </div>
+                        <div class="p-4 min-h-[340px]">
+                            <p class="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-3">Chapter 01 — Foundations</p>
+                            <ul class="space-y-2 text-[11px]">
+                                <li class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-white/5 border border-white/10 text-white/80">
+                                    <span class="text-white/30 cursor-grab">⠿</span>
+                                    <svg class="w-3.5 h-3.5 text-teal-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    Welcome &amp; tools<span class="ml-auto text-[9px] text-white/40 font-mono uppercase">Video</span>
+                                </li>
+                                <li class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-teal-500/15 border border-teal-400/40 text-white">
+                                    <span class="text-teal-300 cursor-grab">⠿</span>
+                                    <svg class="w-3.5 h-3.5 text-teal-300 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    Centering the clay<span class="ml-auto text-[9px] text-white/45 font-mono">12:04</span>
+                                </li>
+                                <li class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-white/5 border border-white/10 text-white/80">
+                                    <span class="text-white/30 cursor-grab">⠿</span>
+                                    <svg class="w-3.5 h-3.5 text-gold-300 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    Reading the clay body<span class="ml-auto text-[9px] text-white/40 font-mono uppercase">Text</span>
+                                </li>
+                                <li class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-white/5 border border-white/10 text-white/80">
+                                    <span class="text-white/30 cursor-grab">⠿</span>
+                                    <svg class="w-3.5 h-3.5 text-teal-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    Live Q&amp;A — Thu 6pm<span class="ml-auto text-[9px] text-white/40 font-mono uppercase">Live</span>
+                                </li>
+                                <li class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-white/5 border border-white/10 text-white/55">
+                                    <span class="text-white/30 cursor-grab">⠿</span>
+                                    <span class="w-3.5 h-3.5 rounded-full border border-white/30 flex-shrink-0"></span>
+                                    Quiz: Wall thickness<span class="ml-auto text-[9px] text-white/40 font-mono uppercase">Quiz</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4 flex items-center gap-2 text-[10px] text-white/40">
+                                <kbd class="px-1.5 py-0.5 rounded bg-white/10 border border-white/15 font-mono">Space</kbd>
+                                <span>lift</span>
+                                <kbd class="px-1.5 py-0.5 rounded bg-white/10 border border-white/15 font-mono">↑</kbd>
+                                <kbd class="px-1.5 py-0.5 rounded bg-white/10 border border-white/15 font-mono">↓</kbd>
+                                <span>reorder · keyboard friendly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-2xl px-4 py-3 flex items-center gap-3 max-w-[220px] hidden md:flex">
+                        <div class="w-9 h-9 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                        <div><p class="text-[12px] font-semibold text-navy-900 leading-tight">Published</p><p class="text-[10px] text-gray-500 font-mono mt-0.5">Shopify product created</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ THE BUILDER ============ -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <div class="reveal lg:sticky lg:top-24">
+                    <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">The builder</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Structure a course the way you'd teach it.</h2>
+                    <p class="text-lg text-gray-600 mb-6 text-pretty">Every course is made of chapters, and every chapter holds lessons. Reorder anything by dragging — and because it's fully keyboard-accessible, you can grab a lesson with <span class="font-semibold text-navy-900">Space</span> and move it with the arrow keys.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Publishing auto-creates a Shopify product</strong> — or link a course to a product you already have.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Seat caps</strong> let you run limited cohorts and close enrollment when a course fills.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Access windows</strong> can be lifetime, or set to expire a fixed number of days after a student enrolls.</span></li>
+                    </ul>
+                </div>
+                <div class="space-y-5 reveal">
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift">
+                            <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+                            <h3 class="font-semibold text-navy-900 mb-1">Video</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">Streamed from Bunny's global CDN behind signed links.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift">
+                            <div class="w-11 h-11 bg-navy-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+                            <h3 class="font-semibold text-navy-900 mb-1">Live</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">A scheduled <a href="live-classes.html" class="text-teal-600 underline">Zoom session</a> students join from the lesson.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift">
+                            <div class="w-11 h-11 bg-gold-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+                            <h3 class="font-semibold text-navy-900 mb-1">Text</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">Rich HTML readings, notes, and resources between videos.</p>
+                        </div>
+                    </div>
+                    <div class="bg-navy-50/50 border border-navy-100 rounded-2xl p-6">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-teal-600 mb-3">Three lesson types, one structure</p>
+                        <p class="text-gray-600 leading-relaxed text-[15px]">Mix and match freely inside any chapter. A typical chapter might open with a <span class="font-semibold text-navy-900">Video</span>, add a <span class="font-semibold text-navy-900">Text</span> reading for context, host a <span class="font-semibold text-navy-900">Live</span> Q&amp;A, then close with a quiz. Want a final exam at the end? See <a href="exams.html" class="text-teal-600 underline">examinations</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECURE VIDEO ============ -->
+    <section class="py-20 md:py-28 bg-navy-50/40 border-y border-navy-100 dot-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-2xl mx-auto reveal">
+                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Secure video</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Hosted fast. Served carefully.</h2>
+                <p class="text-xl text-gray-600 text-pretty">Your lessons stream from Bunny.net's global CDN, with playback gated by short-lived signed links so there are no public URLs floating around for students to copy.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Global CDN delivery</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Bunny.net edge nodes serve video close to each student, wherever they're watching.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Short-lived signed links</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Playback is tied to the lesson through expiring tokens — nothing public to share or hotlink.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Per-store isolation</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Each store's video lives separately, so your library is never mixed with anyone else's.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Adaptive quality</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Playback adjusts to each connection, so students get smooth video on fast and slow networks alike.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Captions &amp; subtitles</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Upload VTT or SRT files to add captions and subtitle tracks to any video lesson.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">In-browser compression</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Large files compress in the browser before upload, and you pick your own thumbnail for each lesson.</p>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mt-3">Upload MP4 and most common video formats — large files compress in your browser first, and your library is limited only by your storage tier (see <a href="pricing.html" class="text-teal-600 font-medium hover:text-teal-700 underline">pricing</a>).</p>
+                </div>
+            </div>
+            <div class="mt-8 max-w-3xl mx-auto bg-gray-50 border border-gray-100 rounded-xl p-5 flex items-start gap-3 reveal">
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <p class="text-sm text-gray-600 leading-relaxed"><span class="font-semibold text-navy-900">Plain about what this is:</span> protection here means token-based access — expiring signed links plus optional visual deterrents. It is not end-to-end file encryption or studio-grade DRM, and we don't claim it to be.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTENT PROTECTION ============ -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="reveal">
+                    <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Content protection</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Make casual sharing more trouble than it's worth.</h2>
+                    <p class="text-lg text-gray-600 mb-6 text-pretty">Turn on deterrents per course to raise the friction on re-sharing your work — without getting in the way of the students who paid for it.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><span class="w-9 h-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Screen watermark</strong> — overlay the student's own identity on the player so a leaked recording points back to its source.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-9 h-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Download deterrents</strong> — discourage right-click saves and the most casual grab-and-share attempts.</span></li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="bg-navy-900 rounded-2xl p-6 shadow-2xl">
+                        <div class="relative rounded-xl overflow-hidden border border-white/10 aspect-video bg-gradient-to-br from-navy-700 to-navy-900">
+                            <div class="absolute inset-0 flex items-center justify-center"><div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0f2744"><path d="M8 5v14l11-7z"/></svg></div></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/15 text-sm font-semibold tracking-wide rotate-[-12deg] select-none whitespace-nowrap">priya@example.com · #4821</div>
+                            <div class="absolute bottom-3 right-3 text-white/20 text-[10px] font-mono select-none">priya@example.com</div>
+                        </div>
+                        <div class="mt-4 flex items-center gap-3 text-[13px]">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-teal-500/20 text-teal-300 border border-teal-400/30 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-teal-300"></span>Watermark on</span>
+                            <span class="text-white/45 font-mono text-[11px]">Per-course setting</span>
+                        </div>
+                    </div>
+                    <div class="mt-5 bg-gold-50 border border-gold-200 rounded-xl p-4 flex items-start gap-3">
+                        <svg class="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <p class="text-sm text-gray-600 leading-relaxed">These are a strong deterrent, not unbreakable DRM. They make sharing inconvenient and traceable — a determined re-recorder can still capture a screen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ THE PLAYER ============ -->
+    <section class="py-20 md:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-2xl mx-auto reveal">
+                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">The player</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">A place students want to come back to.</h2>
+                <p class="text-xl text-gray-600 text-pretty">The lesson page does the remembering, so students can pick up the moment they have ten free minutes.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Smart resume</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Playback picks up exactly where each student left off — no scrubbing to find their place.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Progress tracking</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Watch progress is recorded lesson by lesson and feeds straight into completion gates.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Distraction-free focus</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">A focus mode strips the page back to the lesson itself, so attention stays on the content.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Bookmarks &amp; notes</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Students bookmark key moments and keep personal notes alongside each lesson.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Inline quizzes</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Drop a quiz right under a lesson to check understanding before students move on.</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal">
+                    <div class="w-11 h-11 bg-teal-50 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
+                    <h3 class="font-semibold text-navy-900 mb-2">Lesson discussion</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">A Q&amp;A thread under each lesson lets students ask, and you answer in context. <a href="engagement.html" class="text-teal-600 underline">More on engagement</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DRIP & COMPLETION ============ -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-2xl mx-auto reveal">
+                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Drip &amp; completion</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Control the pace, and define "done."</h2>
+                <p class="text-xl text-gray-600 text-pretty">Decide when content unlocks, and what a student has to do before a course counts as complete.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-6">
+                <div class="bg-navy-50/50 border border-navy-100 rounded-2xl p-8 reveal">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-5 border border-navy-100 shadow-sm"><svg class="w-6 h-6 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-2">Drip scheduling</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Choose how lessons become available to each student.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">None</strong> — everything is open the moment a student enrolls.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">By date</strong> — release lessons on fixed calendar dates, ideal for cohorts.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">N days after enrollment</strong> — drip content relative to each student's own start.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Sequential</strong> — each lesson unlocks only after the prior one is finished.</span></li>
+                    </ul>
+                </div>
+                <div class="bg-teal-50/40 border border-teal-100 rounded-2xl p-8 reveal">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-5 border border-teal-100 shadow-sm"><svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-2">Completion gates</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Set what a student must do before a course is marked complete.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Watch percentage</strong> — require a minimum amount watched (defaults to 80%).</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Quiz pass</strong> — require a passing score on the lesson or course quiz.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">Assignment</strong> — require a graded written submission.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700"><strong class="text-navy-900">A combination</strong> — mix the above to set the bar exactly where you want it.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-gray-600 mt-8 max-w-2xl mx-auto reveal">Completion is what triggers a <a href="certificates.html" class="text-teal-600 underline">certificate</a> — so the gate you set is the standard your students are held to.</p>
+        </div>
+    </section>
+
+    <!-- ============ QUIZZES & ASSIGNMENTS ============ -->
+    <section class="py-20 md:py-28 bg-navy-50/40 border-y border-navy-100 dot-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-2xl mx-auto reveal">
+                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Quizzes &amp; assignments</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy-900 mb-4 tracking-tight text-balance">Seven question types, graded for you.</h2>
+                <p class="text-xl text-gray-600 text-pretty">Build quizzes that grade themselves the moment a student submits, and add assignments where you want a human touch.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal"><span class="text-xs font-bold text-teal-600 font-mono">01</span><h3 class="font-semibold text-navy-900 mt-1 mb-1">Multiple choice</h3><p class="text-sm text-gray-600 leading-relaxed">One correct answer from a set of options.</p></div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal"><span class="text-xs font-bold text-teal-600 font-mono">02</span><h3 class="font-semibold text-navy-900 mt-1 mb-1">True / false</h3><p class="text-sm text-gray-600 leading-relaxed">A quick two-option check.</p></div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal"><span class="text-xs font-bold text-teal-600 font-mono">03</span><h3 class="font-semibold text-navy-900 mt-1 mb-1">Multiple select</h3><p class="text-sm text-gray-600 leading-relaxed">Several correct answers in one question.</p></div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal"><span class="text-xs font-bold text-teal-600 font-mono">04</span><h3 class="font-semibold text-navy-900 mt-1 mb-1">Short answer</h3><p class="text-sm text-gray-600 leading-relaxed">Matched against the accepted answers you set.</p></div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal"><span class="text-xs font-bold text-teal-600 font-mono">05</span><h3 class="font-semibold text-navy-900 mt-1 mb-1">Numeric</h3><p class="text-sm text-gray-600 leading-relaxed">A number, with a tolerance range you define.</p></div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal"><span class="text-xs font-bold text-teal-600 font-mono">06</span><h3 class="font-semibold text-navy-900 mt-1 mb-1">Ordering</h3><p class="text-sm text-gray-600 leading-relaxed">Put items into the correct sequence.</p></div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift reveal"><span class="text-xs font-bold text-teal-600 font-mono">07</span><h3 class="font-semibold text-navy-900 mt-1 mb-1">Matching</h3><p class="text-sm text-gray-600 leading-relaxed">Pair items across two columns.</p></div>
+                <div class="bg-navy-900 p-5 rounded-2xl flex flex-col justify-center reveal"><p class="text-teal-300 text-sm font-semibold mb-1">Final exams too</p><p class="text-white/70 text-sm leading-relaxed">Need timed sittings and paid retakes? <a href="exams.html" class="text-teal-300 underline">See examinations</a>.</p></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-6">
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 reveal">
+                    <h3 class="text-lg font-semibold text-navy-900 mb-4">Auto-graded quizzes</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700">Set a <strong class="text-navy-900">passing score</strong> (defaults to 70%) and optional <strong class="text-navy-900">attempt limits</strong>.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700">Students see <strong class="text-navy-900">explanations after submitting</strong>, so a quiz teaches as well as tests.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700">Results flow into <strong class="text-navy-900">completion gates</strong> automatically.</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 reveal">
+                    <h3 class="text-lg font-semibold text-navy-900 mb-4">Assignments you grade</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700">Students submit a <strong class="text-navy-900">written response</strong>, and you return a score plus feedback.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="text-gray-700">Use assignments as a <strong class="text-navy-900">completion gate</strong> on their own or alongside a quiz.</span></li>
+                    </ul>
+                    <div class="mt-5 bg-gold-50 border border-gold-200 rounded-xl p-4 flex items-start gap-3">
+                        <svg class="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <p class="text-sm text-gray-600 leading-relaxed">Assignments are graded manually — they accept text submissions, and there's no per-question partial credit on auto-graded quizzes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CROSS-LINK STRIP ============ -->
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 gap-5">
+                <a href="exams.html" class="group bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift flex items-start gap-4">
+                    <div class="w-12 h-12 bg-navy-50 rounded-xl flex items-center justify-center flex-shrink-0"><svg class="w-6 h-6 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7l2 2 4-4"/></svg></div>
+                    <div><h3 class="text-lg font-semibold text-navy-900 mb-1">Final exams</h3><p class="text-gray-600 text-[15px] leading-relaxed mb-2">Timed sittings, randomized pools, and paid retakes in a focused exam hall.</p><span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Explore examinations <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+                </a>
+                <a href="certificates.html" class="group bg-white p-7 rounded-2xl border border-gray-100 hover:border-teal-200 hover:shadow-lg card-lift flex items-start gap-4">
+                    <div class="w-12 h-12 bg-gold-50 rounded-xl flex items-center justify-center flex-shrink-0"><svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m-6 9a7 7 0 110-14 7 7 0 010 14zm0 0v3l-2-1-2 1m8-3v3l2-1 2 1"/></svg></div>
+                    <div><h3 class="text-lg font-semibold text-navy-900 mb-1">Completion certificates</h3><p class="text-gray-600 text-[15px] leading-relaxed mb-2">Branded PDF diplomas issued on completion, with a public verify page.</p><span class="text-teal-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Explore certificates <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="gradient-bg hero-pattern py-20 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-5 tracking-tight text-balance">Ready to start teaching?</h2>
+            <p class="text-xl text-navy-100 mb-8 max-w-xl mx-auto">Install Chapters free from the Shopify App Store. Build your first course today.</p>
+            <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg hover:shadow-xl">
+                Install Free
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <p class="text-sm text-navy-200 mt-5">Free to install · No monthly fee · 5% only when you sell</p>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-navy-900 text-gray-400 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert" width="160" height="56">
+                    <p class="text-sm leading-relaxed max-w-xs">Sell courses, exams, and certificates — and host live classes — directly from your Shopify store.</p>
+                    <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 mt-5 bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-lg text-sm font-semibold transition border border-white/15">Install on Shopify</a>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="courses.html" class="hover:text-teal-400 transition">Courses &amp; video</a></li>
+                        <li><a href="exams.html" class="hover:text-teal-400 transition">Examinations</a></li>
+                        <li><a href="certificates.html" class="hover:text-teal-400 transition">Certificates</a></li>
+                        <li><a href="live-classes.html" class="hover:text-teal-400 transition">Live classes</a></li>
+                        <li><a href="storefront.html" class="hover:text-teal-400 transition">Sell on Shopify</a></li>
+                        <li><a href="engagement.html" class="hover:text-teal-400 transition">Engage &amp; grow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-teal-400 transition">All features</a></li>
+                        <li><a href="pricing.html" class="hover:text-teal-400 transition">Pricing</a></li>
+                        <li><a href="index.html#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="zoom-setup.html" class="hover:text-teal-400 transition">Zoom setup guide</a></li>
+                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.pixipace.com" class="hover:text-teal-400 transition">Pixipace</a></li>
+                        <li><a href="mailto:chapters@pixipace.com" class="hover:text-teal-400 transition">chapters@pixipace.com</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-sm">&copy; <span data-year>2026</span> Pixipace. All rights reserved.</p>
+                <p class="text-sm">Free to install · 5% only when you sell</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/site.js" defer></script>
+</body>
+</html>
