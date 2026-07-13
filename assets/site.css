@@ -102,6 +102,8 @@ details[open] .faq-toggle { transform: rotate(45deg); }
 .prose-chapters a  { color: var(--teal-600); text-decoration: underline; }
 .prose-chapters strong { color: var(--navy-900); }
 .prose-chapters code { background:#f1f5f9; padding:.1rem .35rem; border-radius:.3rem; font-size:.92em; }
+.prose-chapters pre { background:#0f2744; color:#d9e2ec; padding:1rem 1.25rem; border-radius:.75rem; overflow-x:auto; margin-bottom:1rem; font-size:.85rem; line-height:1.6; }
+.prose-chapters pre code { background:transparent; padding:0; color:inherit; font-size:inherit; white-space:pre; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

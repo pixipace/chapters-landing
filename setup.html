@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="js-off">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters Setup Guide — Every Step From Install to Your First Student</title>
+    <meta name="description" content="The complete Chapters setup guide for Shopify merchants: theme blocks, checkout blocks, My Learning account page, sign-in before checkout, course-aware order emails, branding, and video upload — every click explained.">
+    <link rel="canonical" href="https://chapters.pixipace.com/setup.html">
+    <meta name="theme-color" content="#16376d">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chapters">
+    <meta property="og:title" content="Chapters setup guide — every step, every click">
+    <meta property="og:description" content="Install, publish a course, place the theme and checkout blocks, activate My Learning, make your order email course-aware, and launch. The full merchant walkthrough.">
+    <meta property="og:image" content="https://chapters.pixipace.com/assets/og-image.png">
+    <meta property="og:url" content="https://chapters.pixipace.com/setup.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chapters setup guide — every step, every click">
+    <meta name="twitter:description" content="The full merchant walkthrough: theme blocks, checkout blocks, My Learning, course-aware emails, branding, and launch checks.">
+    <meta name="twitter:image" content="https://chapters.pixipace.com/assets/og-image.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        navy: { 50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#16376d',900:'#0f2744' },
+                        teal: { 50:'#effcf6',100:'#c6f7e2',200:'#8eedc7',300:'#65d6ad',400:'#3ebd93',500:'#25ad9f',600:'#199473',700:'#147d64',800:'#0c6b58',900:'#014d40' },
+                        gold: { 50:'#fbf7ee',100:'#f5ebd0',200:'#e9d4a0',300:'#dcbb6e',400:'#cfa548',500:'#c79a3a',600:'#a87d2c',700:'#855f24' },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Set up Chapters on your Shopify store",
+      "description": "Every step from installing Chapters to your first enrolled student: theme blocks, checkout blocks, the My Learning account page, sign-in before checkout, course-aware order emails, and branding.",
+      "totalTime": "PT45M",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Install Chapters and activate the free plan", "url": "https://chapters.pixipace.com/setup.html#install" },
+        { "@type": "HowToStep", "position": 2, "name": "Create and publish your first course", "url": "https://chapters.pixipace.com/setup.html#first-course" },
+        { "@type": "HowToStep", "position": 3, "name": "Add the theme blocks", "url": "https://chapters.pixipace.com/setup.html#theme-blocks" },
+        { "@type": "HowToStep", "position": 4, "name": "Turn on the thank-you checkout block", "url": "https://chapters.pixipace.com/setup.html#checkout-blocks" },
+        { "@type": "HowToStep", "position": 5, "name": "Require sign-in before checkout", "url": "https://chapters.pixipace.com/setup.html#sign-in" },
+        { "@type": "HowToStep", "position": 6, "name": "Put My Learning inside the Shopify account", "url": "https://chapters.pixipace.com/setup.html#my-learning" },
+        { "@type": "HowToStep", "position": 7, "name": "Make the order confirmation email course-aware", "url": "https://chapters.pixipace.com/setup.html#order-email" },
+        { "@type": "HowToStep", "position": 8, "name": "Brand the checkout, accounts, and portal", "url": "https://chapters.pixipace.com/setup.html#branding" }
+      ],
+      "publisher": { "@type": "Organization", "name": "Pixipace", "url": "https://www.pixipace.com" }
+    }
+    </script>
+</head>
+<body class="antialiased text-navy-900 bg-white">
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="siteNav" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center" aria-label="Chapters home">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8" width="160" height="56">
+                </a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <div class="relative group">
+                        <a href="features.html" class="flex items-center gap-1 text-gray-600 hover:text-navy-800 transition font-medium py-5">
+                            Features
+                            <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[34rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 pt-2">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                                <a href="courses.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Courses &amp; video</span><span class="block text-xs text-gray-500 mt-0.5">Builder, secure player, quizzes</span></span>
+                                </a>
+                                <a href="exams.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Examinations</span><span class="block text-xs text-gray-500 mt-0.5">Timed, randomized, paid retakes</span></span>
+                                </a>
+                                <a href="certificates.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Certificates</span><span class="block text-xs text-gray-500 mt-0.5">Branded PDFs, public verify</span></span>
+                                </a>
+                                <a href="live-classes.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Live classes</span><span class="block text-xs text-gray-500 mt-0.5">Zoom, scheduled in-lesson</span></span>
+                                </a>
+                                <a href="storefront.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Sell on Shopify</span><span class="block text-xs text-gray-500 mt-0.5">Blocks, checkout, auto-enroll</span></span>
+                                </a>
+                                <a href="engagement.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Engage &amp; grow</span><span class="block text-xs text-gray-500 mt-0.5">Q&amp;A, email, push, insights</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
+                    <a href="setup.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Setup guide</a>
+                    <a href="index.html#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://apps.shopify.com/chapters" class="hidden sm:inline-flex bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
+                        Install Free
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-navy-900" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <p class="px-3 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Features</p>
+                <a href="courses.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Courses &amp; video</a>
+                <a href="exams.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Examinations</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Certificates</a>
+                <a href="live-classes.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Live classes</a>
+                <a href="storefront.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Sell on Shopify</a>
+                <a href="engagement.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Engage &amp; grow</a>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <a href="features.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">All features</a>
+                <a href="pricing.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Pricing</a>
+                <a href="setup.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Setup guide</a>
+                <a href="index.html#faq" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">FAQ</a>
+                <a href="https://apps.shopify.com/chapters" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white text-center px-5 py-3 rounded-lg font-semibold transition">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HEADER ============ -->
+    <header class="pt-28 pb-10 md:pt-32 md:pb-12 bg-navy-50/40 border-b border-navy-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">Getting started</p>
+            <h1 class="font-display text-3xl md:text-5xl font-bold text-navy-900 tracking-tight text-balance">The complete setup guide — every step, every click</h1>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl text-pretty">From install to your first enrolled student. Most of Chapters works the moment you publish a course; this guide also walks through every optional Shopify and theme step that makes your store feel like a school, end to end.</p>
+            <p class="text-sm text-gray-500 mt-4">Last updated: July 12, 2026</p>
+        </div>
+    </header>
+
+    <!-- ============ AT A GLANCE ============ -->
+    <section class="py-10 md:py-12 bg-white border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="rounded-2xl border border-teal-200 bg-teal-50/50 p-6">
+                    <h2 class="font-display text-lg font-bold text-navy-900 mb-3">What Chapters does automatically</h2>
+                    <ul class="space-y-2 text-[15px] text-gray-700">
+                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Creates the Shopify product when you publish a course or exam — digital, no shipping</span></li>
+                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Enrolls the student the moment their order is paid, and fulfills the order</span></li>
+                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Serves the whole student portal at <code class="bg-white px-1.5 py-0.5 rounded text-sm">yourstore.com/apps/courses</code> — works with any theme</span></li>
+                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Adds SEO structured data (schema.org Course) to every course page for Google rich results</span></li>
+                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Hosts and streams your video — nothing to set up</span></li>
+                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Soft-revokes access on refunds</span></li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl border border-navy-100 bg-navy-50/40 p-6">
+                    <h2 class="font-display text-lg font-bold text-navy-900 mb-3">What you do once (this guide)</h2>
+                    <ul class="space-y-2 text-[15px] text-gray-700">
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">1.</span><a href="#install" class="underline decoration-navy-200 hover:text-navy-900">Install &amp; activate the free plan</a></li>
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">2.</span><a href="#first-course" class="underline decoration-navy-200 hover:text-navy-900">Create &amp; publish your first course</a></li>
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">3.</span><a href="#theme-blocks" class="underline decoration-navy-200 hover:text-navy-900">Add the theme blocks</a></li>
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">4.</span><a href="#checkout-blocks" class="underline decoration-navy-200 hover:text-navy-900">Turn on the thank-you checkout block</a></li>
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">5.</span><a href="#sign-in" class="underline decoration-navy-200 hover:text-navy-900">Require sign-in before checkout</a></li>
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">6.</span><a href="#my-learning" class="underline decoration-navy-200 hover:text-navy-900">Put My Learning in their Shopify account</a></li>
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">7.</span><a href="#order-email" class="underline decoration-navy-200 hover:text-navy-900">Make the order email course-aware</a></li>
+                        <li class="flex gap-2.5"><span class="text-navy-800 font-bold">8.</span><a href="#branding" class="underline decoration-navy-200 hover:text-navy-900">Brand the checkout &amp; portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-5 text-pretty">Steps 1–4 are the launch path — the app's dashboard shows the same checklist and detects most steps automatically (the checkout step you tick off yourself). Steps 5–8 are optional polish that most schools turn on. Videos, live classes, and a launch test are covered at the end.</p>
+        </div>
+    </section>
+
+    <!-- ============ CONTENT ============ -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div class="prose-chapters max-w-none">
+
+            <h2 id="install">1. Install Chapters and activate the free plan</h2>
+            <ul>
+                <li>Install Chapters from the <a href="https://apps.shopify.com/chapters">Shopify App Store</a> and approve the requested access — products, orders, customers, files, plus the publishing and fulfillment access Chapters uses to auto-create course products, enroll students on payment, mark course orders fulfilled, and store your logo.</li>
+                <li>Open Chapters in your Shopify admin. The dashboard's <strong>"Get set up"</strong> checklist mirrors this guide and ticks most steps itself as you go (the checkout step has a "mark as done" button).</li>
+                <li>Click <strong>Activate your free plan</strong>. There is no monthly fee — Chapters charges 5% only when a student buys. Activating just registers the plan with Shopify billing.</li>
+            </ul>
+
+            <h2 id="first-course">2. Create and publish your first course</h2>
+            <ul>
+                <li>Click <strong>Create course</strong>, then add at least one chapter and one lesson (video, text, or quiz). Drag to reorder anytime.</li>
+                <li>Set your price, then hit <strong>Publish</strong>.</li>
+            </ul>
+            <p>
+                Publishing is the moment Chapters wires your store: it creates a real Shopify product for the course —
+                marked as a digital product with <strong>no shipping required</strong>, product type <code>Course</code>, priced at what you set — and publishes it to your Online Store.
+                Exams you sell standalone get their own product (type <code>Exam</code>) the same way. You never create or link these products by hand.
+            </p>
+            <p>
+                Every course page Chapters serves also carries <strong>schema.org Course structured data</strong> automatically, so Google can show your courses as rich results. Nothing to configure.
+            </p>
+            <p class="text-sm">
+                Empty store? The dashboard offers a one-click <strong>sample course</strong> so you can test the whole flow before building your real content.
+            </p>
+
+            <h2 id="theme-blocks">3. Add the theme blocks (theme editor)</h2>
+            <p>
+                Chapters ships four app blocks for your theme. The easiest path: on the app dashboard, the checklist's
+                <strong>"Add block"</strong> buttons open your theme editor with the block already placed — <strong>you just press Save</strong>.
+                To add one manually instead: <strong>Online Store → Themes → Customize</strong>, open the template you want, click <strong>Add block → Apps</strong>, and pick the block.
+            </p>
+            <p class="text-sm">
+                App blocks require an Online Store 2.0 theme — any theme from the current Theme Store qualifies. If <strong>Add block</strong> shows no Apps option, your theme is a vintage one; update it first.
+            </p>
+            <ul>
+                <li><strong>Course Details</strong> — add to your <strong>product template</strong>. On course products it renders the meta chips (length, lessons, level), "What you'll learn" outcomes, and the full curriculum outline; on standalone exam products it shows no card but still tidies the buy box. On every other product it renders nothing, so it's safe on your shared product template.</li>
+                <li><strong>Course Access Card</strong> — product template. Shows guests a sign-in prompt, buyers a "You're enrolled — continue learning" card.</li>
+                <li><strong>Course Catalog</strong> — your homepage (or any page). A browseable grid of your published courses.</li>
+                <li><strong>My Courses Button</strong> — anywhere you want a shortcut into the student portal.</li>
+            </ul>
+            <p>
+                <strong>The buy box cleans itself up.</strong> The Course Details block also hides the <strong>quantity selector</strong> and Shopify's
+                <strong>"Buy it now"</strong> dynamic-checkout button on confirmed course and exam products (both on by default in the block's settings — you can toggle them off).
+                Courses are bought once; with the stepper and the duplicate button gone, the page reads like a course, not a physical product — and other products on your store are untouched.
+            </p>
+            <p class="text-sm">
+                Optional, theme-dependent: many themes have a <em>"skip cart"</em> or <em>"buy button goes straight to checkout"</em> setting. With quantity and Buy-it-now already hidden, turning that on takes a student from <strong>Enroll → payment</strong> in one step. Check your theme's cart settings — this one lives in your theme, not in Chapters.
+            </p>
+
+            <h2 id="checkout-blocks">4. Turn on the thank-you checkout block</h2>
+            <p>
+                Two extensions carry students from "paid" to "learning". Only one needs a click:
+            </p>
+            <ul>
+                <li>Go to <strong>Settings → Checkout</strong> and click <strong>Customize</strong> to open the checkout editor.</li>
+                <li>Use the page selector at the top to open the <strong>Thank you</strong> page, click <strong>Add app block</strong>, and add <strong>"Course thank-you experience"</strong>. Save.</li>
+                <li>The <strong>"Access your course"</strong> card on the order page needs no setup at all — it appears automatically on course and exam orders once Chapters is installed. Just confirm it during the launch test.</li>
+            </ul>
+            <p>
+                After that, course orders end on a <strong>"Welcome to your course"</strong> hero with a <strong>Start learning →</strong> button, and the order page customers revisit carries the
+                <strong>"Access your course"</strong> card forever. Exam orders get their own versions ("Your exam is unlocked"). Orders without a course or exam are completely unchanged.
+            </p>
+            <p class="text-sm">
+                The order-page card renders in Shopify's modern customer accounts (the hosted account pages). If your store still runs legacy customer accounts, switch in step 5 — it unlocks this card and the My Learning page in step 6.
+            </p>
+            <p class="text-sm">
+                <strong>Don't trust the editor preview here:</strong> the checkout editor previews a sample <em>physical</em> order, and these blocks only render for course/exam purchases — so the preview will look empty. That's expected. Verify with a real (or free) course order instead; the launch test at the end of this guide covers it.
+            </p>
+
+            <h2 id="sign-in">5. Require sign-in before checkout (recommended)</h2>
+            <p>
+                In <strong>Settings → Customer accounts</strong>, make sure <strong>customer accounts are on</strong> (choose the modern hosted accounts — Shopify calls the older version "legacy") and enable
+                <strong>"Require customers to log in before checkout"</strong> (wording varies slightly by admin version).
+            </p>
+            <p>
+                Why we recommend it: when every order belongs to a signed-in customer, enrollment is <strong>instant</strong> — the payment webhook carries the customer, and the course unlocks the second Shopify confirms the order. Guests who buy can still claim access by signing in with their order email afterwards, but the signed-in path removes that extra step for every future student.
+            </p>
+
+            <h2 id="my-learning">6. Put "My Learning" inside their Shopify account</h2>
+            <p>
+                Chapters adds a native <strong>My Learning</strong> page to your customers' Shopify account area — the same place as their orders and profile.
+                It shows their enrolled courses with progress, a "continue where you left off" hero, pending quizzes and assignments, upcoming live classes, and one-tap links into the full portal.
+                My Learning requires Shopify's modern customer accounts (see step 5) — it isn't available on legacy accounts. Activate it once:
+            </p>
+            <ul>
+                <li>Go to <strong>Settings → Checkout → Customize</strong> (the same editor also covers customer accounts; you can also reach it from Settings → Customer accounts).</li>
+                <li>Open the page selector at the top and choose <strong>My Learning</strong> under <em>Apps</em>. Save.</li>
+                <li>When the editor offers to <strong>add it to the account menu</strong>, accept — pick the link <em>first</em> (Link → Customer accounts → Apps → My Learning), then confirm the row. A row confirmed with no link silently saves nothing.</li>
+            </ul>
+            <p>
+                Optional but nice: in the same menu editor you can <strong>reorder the menu</strong> so My Learning comes first, and <strong>rename "Orders"</strong> to something shoppers-turned-students expect — like <em>"Purchases"</em>. That one-word change does a lot to make the account area read "school", not "shop".
+            </p>
+            <p class="text-sm">
+                <strong>Preview caveat:</strong> inside the editor, My Learning previews with a placeholder customer, so it shows "Couldn't load your courses". That's the preview, not a bug — sign in to your storefront with a real account to see it live.
+            </p>
+
+            <h2 id="order-email">7. Make the order confirmation email course-aware (optional)</h2>
+            <p>
+                Out of the box, Shopify's order confirmation says "Thank you for your order" and talks about shipping — the right words for products, the wrong ones for a course.
+                Shopify doesn't let apps edit notification emails, so this is a copy-paste job in your admin. Five minutes, once:
+            </p>
+            <ul>
+                <li>Go to <strong>Settings → Notifications → Customer notifications → Order confirmation</strong> and click <strong>Edit code</strong>.</li>
+                <li><strong>Heads-up before you start:</strong> once you customize a notification template, Shopify stops auto-updating it. That's normal for any store that customizes emails — just know you own the template from here.</li>
+            </ul>
+            <p><strong>A — paste this at the very top of the template.</strong> It detects whether the order contains a course or exam:</p>
+            <pre><code>{% assign chx_course_count = 0 %}{% for chx_line in subtotal_line_items %}{% if chx_line.product.type == 'Course' or chx_line.product.type == 'Exam' %}{% assign chx_course_count = chx_course_count | plus: 1 %}{% endif %}{% endfor %}{% assign chx_is_course = false %}{% if chx_course_count > 0 %}{% assign chx_is_course = true %}{% endif %}</code></pre>
+            <p><strong>B — swap the heading.</strong> Find the thank-you heading near the top of the body (in most templates it reads <code>Thank you for your purchase!</code> or <code>Thank you for your order!</code>) and wrap it:</p>
+            <pre><code>{% if chx_is_course %}You're enrolled — welcome to your course!{% else %}Thank you for your purchase!{% endif %}</code></pre>
+            <p><strong>C — add a course intro line.</strong> Good news first: in Shopify's default template the shipping sentence lives inside <code>{% if requires_shipping %}</code>, and course orders are digital — so the shipping talk already hides itself on course orders. What's missing is a positive line in its place. Paste this <em>directly below the heading you edited in B</em> (outside the <code>{% if requires_shipping %}</code> block — don't put it inside, or it will never show):</p>
+            <pre><code>{% if chx_is_course %}Your enrollment is confirmed and your course is unlocked — you can start learning right now.{% endif %}</code></pre>
+            <p class="text-sm">If your template was customized and shows a hard-coded shipping sentence on every order, wrap that sentence instead: <code>{% if chx_is_course %}course wording{% else %}your original sentence{% endif %}</code>.</p>
+            <p><strong>D — add a Start-learning button.</strong> Find the existing button block (search for <code>order_status_url</code> — it sits inside a <code>&lt;table class="row actions"&gt;</code>) and paste this <em>directly above</em> that table:</p>
+            <pre><code>{% if chx_is_course %}
+&lt;table class="row actions"&gt;
+  &lt;tr&gt;
+    &lt;td class="actions__cell"&gt;
+      &lt;table class="button main-button-row"&gt;
+        &lt;tr&gt;
+          &lt;td class="button__cell"&gt;&lt;a href="{{ shop.url }}/apps/courses" class="button__text"&gt;Start learning&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+{% endif %}</code></pre>
+            <ul>
+                <li>Click <strong>Save</strong>, then use <strong>Send test email</strong> for a quick sanity check (test emails use sample data, so the course branch may not show — the real proof is a course order).</li>
+                <li>If your template was already customized, the exact heading in B may differ — wrap whatever your template says. The pattern is the same: <code>{% if chx_is_course %}course wording{% else %}your original wording{% endif %}</code>.</li>
+            </ul>
+            <p>
+                Result: course buyers get <strong>"You're enrolled — welcome to your course!"</strong> with a Start-learning button and zero shipping talk; every other order keeps your normal email, untouched.
+            </p>
+
+            <h2 id="branding">8. Brand the checkout, accounts, and portal</h2>
+            <h3>Checkout &amp; account pages (Shopify's branding editor)</h3>
+            <p>
+                In <strong>Settings → Checkout → Customize</strong>, open the <strong>Branding</strong> panel (paintbrush icon). Set your brand color, button color and corner radius, typography, and upload your logo.
+                This skins your <strong>checkout and the new customer-account pages</strong> (login, orders, My Learning) in one pass — so the whole buy-to-learn journey carries your identity instead of stock Shopify.
+            </p>
+            <h3>The student portal (in Chapters)</h3>
+            <p>
+                In Chapters, open <strong>Settings → Branding</strong>: set a portal name, upload your logo (PNG/JPG/WebP, up to 1&nbsp;MB), pick your brand and accent colors, and flip the toggle on.
+                A width slider lets you size the logo exactly (60–320px, or leave it on Auto). Add your logo and colors once and the whole portal matches — header, buttons, and badges — and your portal name is what students see when they add it to their home screen.
+                Branding off? Students get a clean, premium default theme.
+            </p>
+
+            <h2 id="videos">9. Upload video the right way</h2>
+            <ul>
+                <li><strong>Upload your original files.</strong> Chapters' video pipeline transcodes on the server into multiple resolutions — don't pre-compress, and don't worry about file size at upload time. Compressing first only costs you quality.</li>
+                <li>Every store includes <strong>30&nbsp;GB of video storage free</strong>. Need more? Add 25&nbsp;GB blocks at $4/month each, and drop them whenever your library shrinks.</li>
+                <li>Student streaming includes <strong>100&nbsp;GB per month free</strong> — roughly a few thousand lesson views — with top-ups at $6 per 100&nbsp;GB if your school outgrows it. Your billing page in the app shows both meters live.</li>
+                <li>Playback is token-protected: signed, expiring links, with optional student-email watermarking and download deterrents.</li>
+            </ul>
+
+            <h2 id="live">10. Live classes (Zoom)</h2>
+            <p>
+                Connect Zoom once in <strong>Chapters → Settings → Live Classes</strong>, then schedule live classes right inside your lesson editor — students join from the lesson page, and recordings can replay in-course.
+                The full walkthrough (including disconnecting and what data is stored) lives in the <a href="zoom-setup.html">Zoom setup guide</a>.
+                Google Meet and Microsoft Teams aren't built yet — there's a "Request" button in the same settings if you want to vote for one.
+            </p>
+
+            <h2 id="launch-test">11. The launch test — prove the whole journey once</h2>
+            <p>Before you announce, run one order through the system (set a course to a low price, or use a 100% discount code):</p>
+            <ol>
+                <li><strong>Product page:</strong> the course product shows chips, outcomes, and curriculum; the quantity stepper and Buy-it-now are gone.</li>
+                <li><strong>Checkout:</strong> your colors and logo; sign-in required (if you enabled step 5); no shipping step — course products are digital, so Shopify only asks for a billing address.</li>
+                <li><strong>Thank-you page:</strong> "Welcome to your course" hero with Start learning →.</li>
+                <li><strong>Email:</strong> "You're enrolled — welcome to your course!" with the Start-learning button (if you did step 7).</li>
+                <li><strong>Account:</strong> My Learning shows the course with progress; the order page shows "Access your course".</li>
+                <li><strong>Portal:</strong> the lesson plays, progress saves, and the whole thing carries your branding — try it on your phone too.</li>
+            </ol>
+            <p>If any leg fails, the matching section above has the caveats — nine times out of ten it's a block not yet saved in the right template, or the checkout-editor preview being mistaken for the real thing.</p>
+
+            <h2 id="troubleshooting">Troubleshooting</h2>
+            <ul>
+                <li><strong>Course Details shows nothing</strong> — it renders only on products created by publishing a Chapters course or exam. On any other product it stays invisible by design.</li>
+                <li><strong>Thank-you block missing in the editor preview</strong> — expected; the preview order is a sample physical order. Judge by a real course order.</li>
+                <li><strong>My Learning says "Couldn't load your courses" in the editor</strong> — the editor previews with a placeholder customer. Sign in to your real storefront to verify.</li>
+                <li><strong>Catalog block is empty</strong> — publish at least one course; drafts don't appear.</li>
+                <li><strong>"Add block" has no Apps option</strong> — your theme is a vintage (pre-2.0) theme; update to a current Theme Store theme.</li>
+                <li><strong>My Learning isn't in the checkout editor's page picker</strong> — your store is on legacy customer accounts; switch to the modern accounts in Settings → Customer accounts (step 5).</li>
+                <li><strong>Student paid but isn't enrolled</strong> — check whether the order has a customer attached. Guest checkouts enroll when the buyer signs in with the same email; requiring sign-in (step 5) removes the gap entirely.</li>
+                <li><strong>Anything else</strong> — email <a href="mailto:chapters@pixipace.com">chapters@pixipace.com</a>; we read everything.</li>
+            </ul>
+
+        </div>
+    </main>
+
+    <!-- ============ CTA ============ -->
+    <section class="gradient-bg hero-pattern py-16 md:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight text-balance">Ready to open your school?</h2>
+            <p class="text-navy-100 text-lg mb-8 max-w-xl mx-auto text-pretty">Free to install, no monthly fee. Publish your first course today — the checklist inside the app walks you through the rest.</p>
+            <a href="https://apps.shopify.com/chapters" class="inline-flex bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-xl font-semibold text-lg transition shadow-lg">Install Free on Shopify</a>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-navy-900 text-gray-400 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <img src="assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert" width="160" height="56">
+                    <p class="text-sm leading-relaxed max-w-xs">Sell courses, exams, and certificates — and host live classes — directly from your Shopify store.</p>
+                    <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 mt-5 bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-lg text-sm font-semibold transition border border-white/15">Install on Shopify</a>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="courses.html" class="hover:text-teal-400 transition">Courses &amp; video</a></li>
+                        <li><a href="exams.html" class="hover:text-teal-400 transition">Examinations</a></li>
+                        <li><a href="certificates.html" class="hover:text-teal-400 transition">Certificates</a></li>
+                        <li><a href="live-classes.html" class="hover:text-teal-400 transition">Live classes</a></li>
+                        <li><a href="storefront.html" class="hover:text-teal-400 transition">Sell on Shopify</a></li>
+                        <li><a href="engagement.html" class="hover:text-teal-400 transition">Engage &amp; grow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-teal-400 transition">All features</a></li>
+                        <li><a href="pricing.html" class="hover:text-teal-400 transition">Pricing</a></li>
+                        <li><a href="setup.html" class="hover:text-teal-400 transition">Setup guide</a></li>
+                        <li><a href="index.html#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="zoom-setup.html" class="hover:text-teal-400 transition">Zoom setup guide</a></li>
+                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.pixipace.com" class="hover:text-teal-400 transition">Pixipace</a></li>
+                        <li><a href="mailto:chapters@pixipace.com" class="hover:text-teal-400 transition">chapters@pixipace.com</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-sm">&copy; <span data-year>2026</span> Pixipace. All rights reserved.</p>
+                <p class="text-sm">Free to install · 5% only when you sell</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/site.js" defer></script>
+</body>
+</html>
