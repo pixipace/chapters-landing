@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chapterslms.com/sitemap.xml
+Sitemap: https://www.chapterslms.com/sitemap.xml
