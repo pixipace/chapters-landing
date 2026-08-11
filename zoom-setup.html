@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoom Setup Guide — Chapters by Pixipace</title>
-    <meta name="description" content="How to connect your Zoom account, schedule live classes, and manage recordings in Chapters for Shopify.">
+    <meta name="description" content="How to connect your Zoom account, schedule live classes from the lesson editor, and let students join inside the course player — Chapters for Shopify.">
     <link rel="canonical" href="https://www.chapterslms.com/zoom-setup.html">
     <meta name="theme-color" content="#16376d">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Chapters">
     <meta property="og:title" content="Zoom Setup Guide — Chapters by Pixipace">
-    <meta property="og:description" content="How to connect your Zoom account, schedule live classes, and manage recordings in Chapters for Shopify.">
+    <meta property="og:description" content="How to connect your Zoom account, schedule live classes from the lesson editor, and let students join inside the course player — Chapters for Shopify.">
     <meta property="og:image" content="https://www.chapterslms.com/assets/og-image.png">
     <meta property="og:url" content="https://www.chapterslms.com/zoom-setup.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Zoom Setup Guide — Chapters by Pixipace">
-    <meta name="twitter:description" content="How to connect your Zoom account, schedule live classes, and manage recordings in Chapters for Shopify.">
+    <meta name="twitter:description" content="How to connect your Zoom account, schedule live classes from the lesson editor, and let students join inside the course player — Chapters for Shopify.">
     <meta name="twitter:image" content="https://www.chapterslms.com/assets/og-image.png">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -162,8 +162,9 @@
                 schedules live class meetings, and (when needed) disconnects.
             </p>
             <p>
-                <strong>Who hosts the meeting:</strong> the meeting runs on the merchant's own Zoom account.
+                <strong>Who hosts the meeting:</strong> the meeting runs on the merchant's own Zoom account — free and paid Zoom plans both work.
                 Chapters never hosts meetings itself; we only call Zoom's API to create, update, and delete meetings on the merchant's behalf.
+                Students never leave your store: they join the session inside the course player.
             </p>
 
             <h2>1. Install Chapters on your Shopify store</h2>
@@ -189,7 +190,8 @@
             </ul>
             <p>
                 That's it. Chapters can now create meetings on your Zoom account.
-                You only need to do this once per Shopify store.
+                You only need to do this once per Shopify store, and a free Zoom account is enough —
+                you don't need a paid Zoom plan to run live classes.
             </p>
 
             <h2>3. Schedule a live class meeting</h2>
@@ -205,11 +207,12 @@
             </ul>
             <p>
                 The meeting now appears on your Zoom dashboard (zoom.us → Meetings) like any other scheduled meeting,
-                and your enrolled students see an <strong>Open in Zoom</strong> button on the lesson page.
+                and your enrolled students see the session in the course player on your store, with a live countdown until start time.
             </p>
             <p>
-                If your Zoom plan supports cloud recording, your session can record to your Zoom cloud; afterwards you can
-                attach that recording to the lesson so it becomes an on-demand replay for students who couldn't make the live time.
+                Recording works exactly as it does on any of your Zoom meetings — you record on your own account,
+                using whatever recording options your Zoom plan includes. To offer a replay for students who missed the live time,
+                add the recording to the course as a regular video lesson; video hosting and streaming are already included with Chapters.
             </p>
 
             <h2>4. Reschedule or delete a meeting</h2>
@@ -218,7 +221,23 @@
                 <li><strong>Delete:</strong> click <strong>Delete meeting</strong> in the lesson modal. Chapters deletes the meeting from your Zoom calendar via the API.</li>
             </ul>
 
-            <h2>5. Disconnect or remove the integration</h2>
+            <h2>5. What students see</h2>
+            <p>
+                Enrolled students find the live session as a lesson inside the course, on your own domain — there is no separate
+                Zoom link to email around and no meeting ID to share.
+            </p>
+            <ul>
+                <li><strong>Pre-start countdown:</strong> before the session begins, the lesson shows a live countdown to start time.</li>
+                <li><strong>Join in the course player:</strong> when the class starts, students join directly inside the course player — the Zoom meeting is embedded on the lesson page using Zoom's Meeting SDK.</li>
+                <li><strong>Calendar file:</strong> students can download a calendar (.ics) file for the session and add it to Google Calendar, Apple Calendar, or Outlook.</li>
+                <li><strong>Push reminders:</strong> students who have enabled push notifications in the student portal get reminders 30 minutes and 5 minutes before the class starts.</li>
+            </ul>
+            <p>
+                Because joining happens through the course player, the session sits behind the same sign-in as the rest of
+                the course — students use their normal Shopify customer account, and only enrolled students see the lesson.
+            </p>
+
+            <h2>6. Disconnect or remove the integration</h2>
             <p>
                 You can disconnect Zoom from Chapters at any time, or remove the Chapters app from your Zoom account.
                 Both methods clear all stored Zoom credentials from our database.
@@ -263,8 +282,8 @@
                 Your stored tokens may have been revoked from Zoom's side. Click Disconnect in Chapters Settings, then Connect Zoom again to refresh.
             </p>
             <p>
-                <strong>Students see "Meeting has not started yet" on Open in Zoom:</strong>
-                Chapters creates meetings with the host required to start first (default Zoom security). Start the meeting from your Zoom client at the scheduled time, then students can join.
+                <strong>Students are stuck on the countdown / "meeting has not started":</strong>
+                Chapters creates meetings with the host required to start first (default Zoom security). Start the meeting from your Zoom client at the scheduled time, then students can join from the course player.
             </p>
 
             <h2>Support</h2>

@@ -171,7 +171,7 @@
                         <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Serves the whole student portal at <code class="bg-white px-1.5 py-0.5 rounded text-sm">yourstore.com/apps/courses</code> — works with any theme</span></li>
                         <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Adds SEO structured data (schema.org Course) to every course page for Google rich results</span></li>
                         <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Hosts and streams your video — nothing to set up</span></li>
-                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Soft-revokes access on refunds</span></li>
+                        <li class="flex gap-2.5"><span class="text-teal-600 font-bold">✓</span><span>Revokes access on refunds — progress is kept, so re-enrollment picks up where they left off</span></li>
                     </ul>
                 </div>
                 <div class="rounded-2xl border border-navy-100 bg-navy-50/40 p-6">
@@ -188,7 +188,7 @@
                     </ul>
                 </div>
             </div>
-            <p class="text-sm text-gray-500 mt-5 text-pretty">Steps 1–4 are the launch path — the app's dashboard shows the same checklist and detects most steps automatically (the checkout step you tick off yourself). Steps 5–8 are optional polish that most schools turn on. Videos, live classes, and a launch test are covered at the end.</p>
+            <p class="text-sm text-gray-500 mt-5 text-pretty">Steps 1–4 are the launch path — the app's dashboard shows the same checklist and detects most steps automatically (the checkout step you tick off yourself). Steps 5–8 are optional polish that most schools turn on. Videos, standalone exams, certificates, live classes, and a launch test are covered at the end.</p>
         </div>
     </section>
 
@@ -200,18 +200,19 @@
             <ul>
                 <li>Install Chapters from the <a href="https://apps.shopify.com/chapters">Shopify App Store</a> and approve the requested access — products, orders, customers, files, plus the publishing and fulfillment access Chapters uses to auto-create course products, enroll students on payment, mark course orders fulfilled, and store your logo.</li>
                 <li>Open Chapters in your Shopify admin. The dashboard's <strong>"Get set up"</strong> checklist mirrors this guide and ticks most steps itself as you go (the checkout step has a "mark as done" button).</li>
-                <li>Click <strong>Activate your free plan</strong>. There is no monthly fee — Chapters charges 5% only when a student buys. Activating just registers the plan with Shopify billing.</li>
+                <li>Click <strong>Activate your free plan</strong>. This is the one plan approval you'll ever make — there is no monthly fee. Chapters takes a <strong>5% commission only when a student buys</strong>, and the commission is <strong>capped at $29 per shop per month</strong>. Free until you sell. 5% after. Never more than $29 a month.</li>
+                <li>Everything Chapters ever charges — commission, and any storage or streaming beyond the free allowances — appears on your <strong>normal Shopify invoice</strong>. No separate billing account, no card on file with us.</li>
             </ul>
 
             <h2 id="first-course">2. Create and publish your first course</h2>
             <ul>
-                <li>Click <strong>Create course</strong>, then add at least one chapter and one lesson (video, text, or quiz). Drag to reorder anytime.</li>
+                <li>Click <strong>Create course</strong>, then add at least one chapter and one lesson — video, text, or a live Zoom class. Drag to reorder anytime; quizzes attach to any lesson.</li>
                 <li>Set your price, then hit <strong>Publish</strong>.</li>
             </ul>
             <p>
                 Publishing is the moment Chapters wires your store: it creates a real Shopify product for the course —
                 marked as a digital product with <strong>no shipping required</strong>, product type <code>Course</code>, priced at what you set — and publishes it to your Online Store.
-                Exams you sell standalone get their own product (type <code>Exam</code>) the same way. You never create or link these products by hand.
+                Exams you sell standalone get their own product (type <code>Exam</code>) the same way. You never create these products by hand — though if you'd rather sell through a product that already exists in your store, you can <strong>link any existing Shopify product</strong> to a course instead.
             </p>
             <p>
                 Every course page Chapters serves also carries <strong>schema.org Course structured data</strong> automatically, so Google can show your courses as rich results. Nothing to configure.
@@ -219,6 +220,18 @@
             <p class="text-sm">
                 Empty store? The dashboard offers a one-click <strong>sample course</strong> so you can test the whole flow before building your real content.
             </p>
+            <h3 id="course-settings">Course settings worth a minute (all optional)</h3>
+            <p>Each of these lives in the course editor. None is required to launch — but they're the settings most schools end up wanting, so decide before you announce:</p>
+            <ul>
+                <li><strong>Drip content</strong> — release lessons on a fixed date, a set number of days after enrollment, or sequentially as each lesson is completed.</li>
+                <li><strong>Free previews</strong> — mark individual lessons as free previews, and add a course preview video with a custom poster for the product page.</li>
+                <li><strong>Seat caps</strong> — limit enrollment and the storefront shows a live "spots left" count, then Sold out. Expired seats free up on their own.</li>
+                <li><strong>Access duration</strong> — lifetime by default, or a set number of days. A re-purchase restarts the clock.</li>
+                <li><strong>Completion rules per lesson</strong> — require a watch-time percentage, a quiz pass, an assignment pass, or both before a lesson counts as done.</li>
+                <li><strong>Bulk import</strong> — build the curriculum and question banks from Excel/CSV using the downloadable templates instead of clicking lessons in one by one.</li>
+                <li><strong>Bundles</strong> — one Shopify product can unlock multiple courses; publish once, sell the set.</li>
+                <li><strong>Pricing badges</strong> — set a compare-at price and a Save % badge appears; a featured badge highlights your flagship course in the catalog.</li>
+            </ul>
 
             <h2 id="theme-blocks">3. Add the theme blocks (theme editor)</h2>
             <p>
@@ -341,23 +354,58 @@
                 A width slider lets you size the logo exactly (60–320px, or leave it on Auto). Add your logo and colors once and the whole portal matches — header, buttons, and badges — and your portal name is what students see when they add it to their home screen.
                 Branding off? Students get a clean, premium default theme.
             </p>
+            <h3>Let students install the portal like an app</h3>
+            <p>
+                The portal is an <strong>installable web app (PWA)</strong> — nothing for you to build or submit anywhere. Students add it to their phone's home screen and it opens full-screen with <strong>your store's logo as the icon</strong>: one-tap install on Android, a short guided install on iPhone, both prompted from inside the portal.
+                Once installed, <strong>push notifications</strong> work too — including live-class reminders 30 and 5 minutes before start — with students opting in themselves.
+                Your only setup is step 8 above: the logo and portal name you set there are exactly what lands on their home screen.
+            </p>
 
             <h2 id="videos">9. Upload video the right way</h2>
             <ul>
-                <li><strong>Upload your original files.</strong> Chapters' video pipeline transcodes on the server into multiple resolutions — don't pre-compress, and don't worry about file size at upload time. Compressing first only costs you quality.</li>
-                <li>Every store includes <strong>30&nbsp;GB of video storage free</strong>. Anything beyond bills automatically at $0.16 per GB per month, and the charge shrinks when you delete videos.</li>
+                <li><strong>Upload your original files.</strong> Chapters' video pipeline transcodes on the server into multiple resolutions — don't pre-compress, and don't worry about file size at upload time. Compressing first only costs you quality. Hosting and streaming ride a global CDN, included — no third-party video account needed.</li>
+                <li>Uploads land in a <strong>shared media library</strong> with transcode-progress badges, so you can reuse one video across lessons and courses without uploading twice.</li>
+                <li><strong>Captions:</strong> upload an SRT file on any video lesson — Chapters converts it to VTT for the player automatically.</li>
+                <li>Every store includes <strong>30&nbsp;GB of video storage free</strong>. Anything beyond bills automatically at $0.16 per GB per month, and the charge shrinks when you delete videos. You'll get an <strong>email warning before</strong> a storage overage ever bills — it never lands as a surprise.</li>
                 <li>Student streaming includes <strong>300&nbsp;GB per month free</strong> — roughly a few thousand lesson views — then $0.08 per GB, measured from actual delivery. Your billing page in the app shows both meters live.</li>
-                <li>Playback is token-protected: signed, expiring links, with optional student-email watermarking and download deterrents.</li>
+                <li>Playback is <strong>enrollment-gated and token-protected</strong>: signed, expiring links, a per-student moving watermark, and copy/print/right-click blocking — with a protection toggle per course.</li>
             </ul>
 
-            <h2 id="live">10. Live classes (Zoom)</h2>
+            <h2 id="exams">10. Sell standalone exams (optional)</h2>
             <p>
-                Connect Zoom once in <strong>Chapters → Settings → Live Classes</strong>, then schedule live classes right inside your lesson editor — students join from the lesson page, and recordings can replay in-course.
+                Quizzes belong to lessons; the course-level assessment is the <strong>final exam</strong>. And an exam doesn't have to live inside a course at all — <strong>give an exam a price and it becomes its own Shopify product</strong>, sold at your normal checkout like everything else. Setup in three moves:
+            </p>
+            <ul>
+                <li><strong>Build the exam</strong> from the seven auto-graded question types (multiple choice, true/false, multiple select, short answer, numeric, ordering, matching). Randomize from question pools so no two sittings look alike, and set a time limit — the live countdown survives page reloads.</li>
+                <li><strong>Set the passing score and attempts, then price and publish.</strong> Chapters creates the Shopify product (type <code>Exam</code>); each purchase grants an attempt bundle, and students who run out see <strong>"Buy another attempt"</strong> — paid retakes, no support tickets.</li>
+                <li><strong>Watch the results</strong> in the exam insights dashboard, alongside per-course analytics.</li>
+            </ul>
+            <p class="text-sm">
+                Inside a course, the final exam can also <strong>gate the certificate</strong> — no pass, no certificate. Full detail on the <a href="exams.html">Examinations page</a>.
+            </p>
+
+            <h2 id="certificates">11. Set up certificates before your first graduate</h2>
+            <p>
+                Certificates are <strong>auto-issued per course</strong> — a toggle in each course's settings, on or off as you like. Two minutes of branding now means your very first graduate gets a finished document:
+            </p>
+            <ul>
+                <li><strong>Brand once:</strong> in Chapters' certificate settings, add your logo, brand color, store name, and signer name, and upload a signature image. Everything renders on one professionally designed template — nothing to lay out yourself.</li>
+                <li><strong>Students claim by name:</strong> each student claims the certificate with the name they want printed, and can rename it later without changing the certificate number.</li>
+                <li><strong>Every PDF verifies itself:</strong> the overall score is printed and frozen at claim time, and the footer carries a verify URL — anyone can check it on the public verification page, or look any certificate up by number.</li>
+                <li><strong>Charging for the certificate?</strong> Flip on paid certificates: Chapters auto-creates a hidden Shopify product and puts a buy CTA on the course completion page.</li>
+                <li><strong>Keep the records:</strong> every issued certificate lands in a searchable registry in your admin.</li>
+            </ul>
+            <p class="text-sm">Full detail on the <a href="certificates.html">Certificates page</a>.</p>
+
+            <h2 id="live">12. Live classes (Zoom)</h2>
+            <p>
+                Connect your own Zoom account — free or paid — once via OAuth in <strong>Chapters → Settings → Live Classes</strong>, then schedule live classes right inside your lesson editor: Chapters creates, updates, and deletes the Zoom meetings for you.
+                Students join inside the course player with a pre-start countdown, can download a calendar (.ics) invite, and get push reminders 30 and 5 minutes before start.
                 The full walkthrough (including disconnecting and what data is stored) lives in the <a href="zoom-setup.html">Zoom setup guide</a>.
                 Google Meet and Microsoft Teams aren't built yet — there's a "Request" button in the same settings if you want to vote for one.
             </p>
 
-            <h2 id="launch-test">11. The launch test — prove the whole journey once</h2>
+            <h2 id="launch-test">13. The launch test — prove the whole journey once</h2>
             <p>Before you announce, run one order through the system (set a course to a low price, or use a 100% discount code):</p>
             <ol>
                 <li><strong>Product page:</strong> the course product shows chips, outcomes, and curriculum; the quantity stepper and Buy-it-now are gone.</li>
@@ -365,7 +413,8 @@
                 <li><strong>Thank-you page:</strong> "Welcome to your course" hero with Start learning →.</li>
                 <li><strong>Email:</strong> "You're enrolled — welcome to your course!" with the Start-learning button (if you did step 7).</li>
                 <li><strong>Account:</strong> My Learning shows the course with progress; the order page shows "Access your course".</li>
-                <li><strong>Portal:</strong> the lesson plays, progress saves, and the whole thing carries your branding — try it on your phone too.</li>
+                <li><strong>Portal:</strong> the lesson plays, progress saves, and the whole thing carries your branding — try it on your phone too, and run the home-screen install to see your logo become the icon.</li>
+                <li><strong>Certificate (if enabled):</strong> complete the course, claim the certificate, download the PDF — check your logo, signer, and the verify link in the footer.</li>
             </ol>
             <p>If any leg fails, the matching section above has the caveats — nine times out of ten it's a block not yet saved in the right template, or the checkout-editor preview being mistaken for the real thing.</p>
 
