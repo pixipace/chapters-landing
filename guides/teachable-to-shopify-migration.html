@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="js-off">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable to Shopify Migration Guide (2026) — Chapters</title>
+    <meta name="description" content="How to move your courses from Teachable ($39–$189/mo plus fees) to your Shopify store with Chapters — free to install, 5% only when you sell, capped at $29/mo.">
+    <link rel="canonical" href="https://www.chapterslms.com/guides/teachable-to-shopify-migration.html">
+    <meta name="theme-color" content="#16376d">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Chapters">
+    <meta property="og:title" content="Teachable to Shopify Migration Guide (2026)">
+    <meta property="og:description" content="A realistic step-by-step plan for moving your courses from Teachable to your own Shopify store — what maps to what, what transfers, and what honestly doesn't.">
+    <meta property="og:image" content="https://www.chapterslms.com/assets/og-image.png">
+    <meta property="og:url" content="https://www.chapterslms.com/guides/teachable-to-shopify-migration.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Teachable to Shopify Migration Guide (2026)">
+    <meta name="twitter:description" content="Move your courses from Teachable to your own Shopify store with Chapters — free to install, 5% only when you sell, capped at $29/month.">
+    <meta name="twitter:image" content="https://www.chapterslms.com/assets/og-image.png">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        navy: { 50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#16376d',900:'#0f2744' },
+                        teal: { 50:'#effcf6',100:'#c6f7e2',200:'#8eedc7',300:'#65d6ad',400:'#3ebd93',500:'#25ad9f',600:'#199473',700:'#147d64',800:'#0c6b58',900:'#014d40' },
+                        gold: { 50:'#fbf7ee',100:'#f5ebd0',200:'#e9d4a0',300:'#dcbb6e',400:'#cfa548',500:'#c79a3a',600:'#a87d2c',700:'#855f24' },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/site.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Teachable to Shopify Migration Guide (2026)",
+      "description": "A realistic step-by-step plan for moving your courses from Teachable to your own Shopify store with Chapters — what maps to what, what transfers, and what doesn't.",
+      "url": "https://www.chapterslms.com/guides/teachable-to-shopify-migration.html",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.chapterslms.com/guides/teachable-to-shopify-migration.html" },
+      "image": "https://www.chapterslms.com/assets/og-image.png",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-11",
+      "author": { "@type": "Person", "name": "Gill", "description": "Builder of Chapters LMS" },
+      "publisher": { "@type": "Organization", "name": "Pixipace", "url": "https://www.pixipace.com" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.chapterslms.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.chapterslms.com/guides.html" },
+        { "@type": "ListItem", "position": 3, "name": "Teachable to Shopify Migration Guide" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I transfer my students from Teachable to Shopify?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You can export your student list from Teachable and bring those people into your Shopify store as customers, but enrollments don't transfer automatically. The simplest way to re-enroll existing students in Chapters is a one-time 100%-off discount code: they check out for free on your store, and Chapters enrolls them instantly on payment — guest checkout works too. Their lesson progress and quiz history from Teachable will not carry over." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Shopify have a built-in LMS for courses?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Shopify handles products, checkout, and customers, but it has no native course player, so you add a course app. Chapters adds a branded student portal at /apps/courses on your own domain, turns each course into a native Shopify product, and includes video hosting on a global CDN. It's free to install with a 5% commission only when you sell, capped at $29 a month." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a Teachable to Shopify migration take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the size of your library. Exporting from Teachable is usually the slowest part because you download each video. Rebuilding in Chapters is faster than building the first time: CSV curriculum import recreates your chapter and lesson structure in bulk, question-bank import handles quizzes and exams, and the shared media library means each video is uploaded once and reused anywhere. Most single-course schools can move in a few focused days; larger libraries take longer. You can run both platforms in parallel the whole time because installing Chapters costs nothing." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my students lose their progress when I switch from Teachable?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — lesson progress, quiz attempts, and completion history do not transfer between course platforms, and there's no honest way around that. Tell students before the move, give them a window to finish anything in flight on Teachable, and consider softening the reset with a bonus lesson or a discount on your next course. Certificates they already earned remain theirs as downloaded PDFs; new completions get Chapters certificates with public verification pages." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to sell courses on Shopify with Chapters?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Chapters is free to install with no monthly fee. You pay a 5% commission only when a course, exam, retake, or paid certificate sells, capped at $29 a month, billed on your normal Shopify invoice. Video hosting is included: 30 GB of storage free, then $0.16/GB/month, and 300 GB of student streaming free each month, then $0.08/GB. By comparison, Teachable's public pricing (August 2026) starts at $39/month plus a 7.5% transaction fee on its Starter plan, with 0%-fee plans at $89 and $189 per month." }
+        }
+      ]
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTTG1EZCKX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZTTG1EZCKX');
+    </script>
+</head>
+<body class="antialiased text-navy-900 bg-white">
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="siteNav" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center" aria-label="Chapters home">
+                    <img src="../assets/logo.svg" alt="Chapters" class="h-8" width="160" height="56">
+                </a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <div class="relative group">
+                        <a href="../features.html" class="flex items-center gap-1 text-gray-600 hover:text-navy-800 transition font-medium py-5">
+                            Features
+                            <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[34rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 pt-2">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                                <a href="../courses.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Courses &amp; video</span><span class="block text-xs text-gray-500 mt-0.5">Builder, secure player, quizzes</span></span>
+                                </a>
+                                <a href="../exams.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Examinations</span><span class="block text-xs text-gray-500 mt-0.5">Timed, randomized, paid retakes</span></span>
+                                </a>
+                                <a href="../certificates.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Certificates</span><span class="block text-xs text-gray-500 mt-0.5">Branded PDFs, public verify</span></span>
+                                </a>
+                                <a href="../live-classes.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Live classes</span><span class="block text-xs text-gray-500 mt-0.5">Zoom, scheduled in-lesson</span></span>
+                                </a>
+                                <a href="../storefront.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Sell on Shopify</span><span class="block text-xs text-gray-500 mt-0.5">Blocks, checkout, auto-enroll</span></span>
+                                </a>
+                                <a href="../engagement.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Engage &amp; grow</span><span class="block text-xs text-gray-500 mt-0.5">Q&amp;A, email, push, insights</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../guides.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Guides</a>
+                    <a href="../pricing.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
+                    <a href="../setup.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Setup guide</a>
+                    <a href="../index.html#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://apps.shopify.com/chapters" class="hidden sm:inline-flex bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
+                        Install Free
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-navy-900" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <p class="px-3 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Features</p>
+                <a href="../courses.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Courses &amp; video</a>
+                <a href="../exams.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Examinations</a>
+                <a href="../certificates.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Certificates</a>
+                <a href="../live-classes.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Live classes</a>
+                <a href="../storefront.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Sell on Shopify</a>
+                <a href="../engagement.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Engage &amp; grow</a>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <a href="../features.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">All features</a>
+                <a href="../pricing.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Pricing</a>
+                <a href="../setup.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Setup guide</a>
+                <a href="../index.html#faq" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">FAQ</a>
+                <a href="https://apps.shopify.com/chapters" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white text-center px-5 py-3 rounded-lg font-semibold transition">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ ARTICLE HEADER ============ -->
+    <section class="pt-28 pb-10 md:pt-36 md:pb-12 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav aria-label="Breadcrumb" class="mb-6 reveal">
+                <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-500">
+                    <li><a href="../index.html" class="hover:text-teal-600 transition">Home</a></li>
+                    <li aria-hidden="true" class="text-gray-300">/</li>
+                    <li><a href="../guides.html" class="hover:text-teal-600 transition">Guides</a></li>
+                    <li aria-hidden="true" class="text-gray-300">/</li>
+                    <li class="text-navy-900 font-medium" aria-current="page">Teachable to Shopify migration</li>
+                </ol>
+            </nav>
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-navy-900 leading-[1.08] tracking-tight mb-5 text-balance reveal">How to move your courses from Teachable to Shopify</h1>
+            <p class="text-sm text-gray-500 mb-6 reveal">By Gill · builder of Chapters LMS · Updated August 2026</p>
+            <div class="bg-teal-50/70 border border-teal-100 rounded-2xl p-6 reveal">
+                <p class="text-lg text-gray-700 leading-relaxed text-pretty">To move from Teachable to Shopify, you export your videos, lessons, and student list from Teachable, install a course app on your store — <a href="https://apps.shopify.com/chapters" class="text-teal-700 font-semibold underline">Chapters</a> is free to install, with a 5% commission only when you sell, capped at $29/month — rebuild your courses, then point students at your new portal and cancel your Teachable plan. There's no one-click transfer between the two platforms. But with bulk CSV import for your curriculum and question banks, the rebuild is much faster than building the first time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ARTICLE BODY ============ -->
+    <article class="pb-16 md:pb-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-navy-900 tracking-tight mt-12 mb-4">Can you move a Teachable course to Shopify?</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Yes — but understand what "moving" means first. Shopify handles products, checkout, and customers brilliantly, and it has no course player at all.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">So a migration has two halves. Your selling moves to Shopify itself: each course becomes a normal Shopify product that sells at your store's own checkout. Your teaching moves to a course app: with Chapters, students learn in a branded portal at <span class="font-mono text-[15px] bg-gray-50 border border-gray-100 rounded px-1.5 py-0.5">/apps/courses</span> on your own domain, signed in with their regular customer account.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">That's the whole architecture. No separate school subdomain, no second login for your buyers, no second checkout taking payments somewhere else.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">If you're still weighing whether to switch at all, the <a href="../teachable-alternative.html" class="text-teal-600 font-semibold underline">Chapters vs Teachable head-to-head</a> covers the platform comparison. This guide assumes you've decided and want the actual moving plan.</p>
+
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-navy-900 tracking-tight mt-12 mb-4">Why move from Teachable to Shopify?</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">The usual trigger is running two platforms when one would do. Per Teachable's own public pages (August 2026), a Teachable school runs its own site, its own checkout, and its own customer accounts — all separate from your Shopify store.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">In practice that means two customer lists that never quite match, two dashboards to check, and buyers who need one login for your products and another for your courses.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Then there's the bill. Per Teachable's public pricing page in August 2026, the Starter plan is $39/month (or $29/month billed annually) plus a 7.5% transaction fee on sales; dropping the fee to 0% means Builder at $89/month or Growth at $189/month. That subscription bills whether you sell or not.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Chapters flips that model. It's free to install with no monthly fee — you pay 5% only when a course actually sells, and the commission is capped at $29 a month. A $100 course sale costs $5. A zero-sales month costs $0. The full breakdown is on the <a href="../pricing.html" class="text-teal-600 font-semibold underline">pricing page</a>.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Consolidating also means every course buyer lands in your Shopify customer list — the same list you already use for email, discounts, and everything else you sell. One checkout, one set of orders, one place your business lives.</p>
+
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-navy-900 tracking-tight mt-12 mb-4">Teachable to Shopify: what maps to what</h2>
+            <p class="text-gray-700 leading-relaxed mb-6">Before you export anything, it helps to know where each piece of your Teachable school ends up. Here's the translation table.</p>
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-4">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-[15px] min-w-[640px]">
+                        <thead>
+                            <tr class="border-b border-gray-100 bg-gray-50/70">
+                                <th class="px-6 py-4 font-semibold text-navy-900 w-[38%]">On Teachable</th>
+                                <th class="px-6 py-4 font-semibold text-teal-700 bg-teal-50/60 w-[62%]">On Shopify with Chapters</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 align-top">
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">Your school (separate site)</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">Your existing Shopify store, plus a branded student portal at /apps/courses on your own domain — installable to a phone's home screen.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">A course</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">A Chapters course: chapters containing lessons, each lesson video, text, or a live Zoom session.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">Sales page &amp; pricing</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">A native Shopify product — auto-created when you publish the course (priced, digital, no shipping), or linked to any existing product.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">Teachable checkout</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">Your store's normal Shopify checkout — guest checkout included, multi-currency supported, enrollment lands instantly on payment.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">Students</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">Shopify customers — one list covering course buyers and everything else you sell.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">Video hosting</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">Built in, on a global CDN — 30&nbsp;GB storage free, then $0.16/GB/month; 300&nbsp;GB of student streaming free monthly, then $0.08/GB. No Vimeo or Wistia account needed.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">Quizzes</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">Quizzes with 7 auto-graded question types, graded assignments with written feedback, plus timed exams with retakes and randomized pools.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-navy-900">Certificates &amp; drip</td>
+                                <td class="px-6 py-4 text-gray-700 bg-teal-50/30">Certificates with public verification pages (optionally paid), and drip by date, days-after-enrollment, or sequential unlock.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="px-6 py-4 text-sm text-gray-500 border-t border-gray-100">Teachable structure per its public pages, August 2026. See the <a href="../features.html" class="underline hover:text-teal-600 transition">full Chapters feature list</a> for everything included.</p>
+            </div>
+
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-navy-900 tracking-tight mt-12 mb-4">The step-by-step migration plan</h2>
+            <p class="text-gray-700 leading-relaxed mb-6">Here's the order that works. The whole plan runs alongside your live Teachable school, so nothing goes dark mid-move.</p>
+
+            <h3 class="text-xl font-bold text-navy-900 mt-8 mb-3"><span class="inline-flex w-7 h-7 rounded-full bg-teal-100 text-teal-700 items-center justify-center text-sm font-bold mr-2">1</span>Export everything from Teachable</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Download your video files, copy your text lessons and descriptions, and export your student list as a CSV. Write down your quiz questions, drip schedule, and prices while you're in there.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Do this first, and do it completely. Everything else in the plan depends on having your content in hand, and downloading videos is usually the slowest single task in the whole migration.</p>
+
+            <h3 class="text-xl font-bold text-navy-900 mt-8 mb-3"><span class="inline-flex w-7 h-7 rounded-full bg-teal-100 text-teal-700 items-center justify-center text-sm font-bold mr-2">2</span>Install Chapters and approve the $0 plan</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Install from the <a href="https://apps.shopify.com/chapters" class="text-teal-600 font-semibold underline">Shopify App Store</a> and approve the plan once — it's $0, with no monthly fee and no card beyond what Shopify already has. Charges only ever appear on your normal Shopify invoice, and only after you sell.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">That matters for a migration: you can rebuild your entire school at your own pace without paying for two platforms during the overlap.</p>
+
+            <h3 class="text-xl font-bold text-navy-900 mt-8 mb-3"><span class="inline-flex w-7 h-7 rounded-full bg-teal-100 text-teal-700 items-center justify-center text-sm font-bold mr-2">3</span>Rebuild your course structure — in bulk</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">You don't have to click out every lesson by hand. Chapters imports your curriculum from a CSV or Excel file (templates provided), recreating your chapter and lesson structure in one pass. Quiz and exam questions import the same way through the question-bank importer.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Videos upload straight into Chapters — hosting is included — and land in a shared media library. Upload each file once, then attach it to any lesson in any course. If the same welcome video opens three courses, it's stored once.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Add captions, mark a lesson or two as free previews, and set your drip rules as you go.</p>
+
+            <h3 class="text-xl font-bold text-navy-900 mt-8 mb-3"><span class="inline-flex w-7 h-7 rounded-full bg-teal-100 text-teal-700 items-center justify-center text-sm font-bold mr-2">4</span>Set prices and publish</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Set each course's price and hit publish. Chapters auto-creates the Shopify product for you — priced, digital, no shipping — or you can link a product you've already made. Bundles, seat caps, and access windows are there if your Teachable school used the equivalents.</p>
+
+            <h3 class="text-xl font-bold text-navy-900 mt-8 mb-3"><span class="inline-flex w-7 h-7 rounded-full bg-teal-100 text-teal-700 items-center justify-center text-sm font-bold mr-2">5</span>Test it as a student</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Buy your own course before anyone else does. Check that payment enrolls you instantly, the welcome email arrives, the order auto-fulfills, and the portal works on your phone — including installing it to the home screen. The <a href="../setup.html" class="text-teal-600 font-semibold underline">setup guide</a> has a fuller pre-launch checklist.</p>
+
+            <h3 class="text-xl font-bold text-navy-900 mt-8 mb-3"><span class="inline-flex w-7 h-7 rounded-full bg-teal-100 text-teal-700 items-center justify-center text-sm font-bold mr-2">6</span>Move your students over</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Bring your exported student list into Shopify as customers. Then give existing students a one-time 100%-off discount code for the courses they already own: they check out free on your store, and enrollment lands the moment the order completes — guest checkout works if they don't feel like creating an account first.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Announce the move with clear, short instructions: here's the new link, here's your code, here's the date the old school closes. Expect to send that email more than once.</p>
+
+            <h3 class="text-xl font-bold text-navy-900 mt-8 mb-3"><span class="inline-flex w-7 h-7 rounded-full bg-teal-100 text-teal-700 items-center justify-center text-sm font-bold mr-2">7</span>Sunset your Teachable plan</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Keep Teachable alive for a couple of weeks as a safety net while stragglers move, then cancel the subscription. Keep your exports — videos, CSVs, student list — as a permanent backup regardless.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Update every link that pointed at your old school: email signatures, social bios, YouTube descriptions, old newsletters if you can. Those links outlive the school itself.</p>
+
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-navy-900 tracking-tight mt-12 mb-4">What doesn't transfer from Teachable — honestly</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">This is the part most migration guides mumble through, so let's not.</p>
+            <p class="text-gray-700 leading-relaxed mb-4"><strong class="text-navy-900">Student progress doesn't move.</strong> Lesson completions, quiz attempts, and course history live inside Teachable and can't be injected into another platform. Every student starts at 0% in the new portal.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Tell them before the switch, and give anyone mid-course a window to finish what they started. A small make-good helps too — a bonus lesson, or a discount on your next course.</p>
+            <p class="text-gray-700 leading-relaxed mb-4"><strong class="text-navy-900">Old certificates stay old.</strong> Certificates already issued through Teachable remain whatever students downloaded. Completions in Chapters generate new certificates with public verification pages — arguably an upgrade, but past ones won't be re-issued automatically.</p>
+            <p class="text-gray-700 leading-relaxed mb-4"><strong class="text-navy-900">Comments and community threads don't come along.</strong> Anything conversational tied to your Teachable school stays there. Screenshot or archive whatever you'd hate to lose.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Switching course platforms always costs you the history layer, whichever direction you're going — anyone who promises a lossless one-click migration is selling something. What you keep is everything that matters commercially: your content, your students' contact details, and from now on, a single store where both live.</p>
+        </div>
+    </article>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-16 md:py-20 bg-gray-50 scroll-mt-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <p class="text-sm font-semibold tracking-wider uppercase text-teal-600 mb-3">FAQ</p>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 tracking-tight">Teachable to Shopify, answered.</h2>
+            </div>
+            <div class="divide-y divide-gray-200 border-t border-gray-200">
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Can I transfer my students from Teachable to Shopify?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">You can export your student list from Teachable and bring those people into your store as Shopify customers, but enrollments don't transfer automatically. The simplest re-enrollment path is a one-time 100%-off discount code: existing students check out free on your store and Chapters enrolls them instantly on payment — guest checkout works too. Their Teachable progress and quiz history won't carry over.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Does Shopify have a built-in LMS?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">No. Shopify handles products, checkout, and customers, but it has no course player, so you add a course app. Chapters adds a branded portal at /apps/courses on your own domain, turns each course into a native Shopify product, and includes video hosting on a global CDN. It's <a href="../pricing.html" class="text-teal-600 font-semibold underline">free to install</a> — 5% only when you sell, capped at $29/month.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">How long does a Teachable to Shopify migration take?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Depends on your library. Downloading videos from Teachable is usually the slowest part. The rebuild goes faster than the original build: CSV curriculum import recreates chapters and lessons in bulk, question-bank import handles quizzes and exams, and the shared media library means each video uploads once. A single-course school can move in a few focused days; bigger libraries take longer — and you can run both platforms in parallel the whole time since installing Chapters costs nothing.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Will my students lose their progress?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Yes — progress, quiz attempts, and completion history don't transfer between course platforms, and there's no honest workaround. Announce the move ahead of time, let active students finish what's in flight, and soften the reset with a bonus lesson or a discount. Certificates they already earned stay theirs as PDFs; new completions earn Chapters certificates with public verification pages.</p></details>
+                <details class="group py-6"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">How much does selling courses on Shopify cost with Chapters?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Chapters is free to install with no monthly fee — 5% only when a course, exam, retake, or paid certificate sells, capped at $29/month, on your normal Shopify invoice. Video hosting is included: 30&nbsp;GB storage free (then $0.16/GB/month) and 300&nbsp;GB monthly student streaming free (then $0.08/GB). For comparison, Teachable's public pricing (August 2026) starts at $39/month plus a 7.5% transaction fee on Starter, with 0%-fee plans at $89 and $189/month. See <a href="../pricing.html" class="text-teal-600 font-semibold underline">Chapters pricing</a>.</p></details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="gradient-bg hero-pattern py-20 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-5 tracking-tight text-balance">Rebuild before you cancel anything.</h2>
+            <p class="text-xl text-navy-100 mb-8 max-w-xl mx-auto">Install Chapters free and rebuild your school alongside your live Teachable account — you won't pay a cent until a course sells.</p>
+            <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg hover:shadow-xl">
+                Install Free
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <p class="text-sm text-navy-200 mt-5">Free to install · No monthly fee · 5% only when you sell, capped at $29/month</p>
+        </div>
+    </section>
+
+    <!-- ============ DISCLAIMER ============ -->
+    <section class="py-8 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-xs text-gray-400 leading-relaxed text-center">Teachable is a trademark of its respective owner. Chapters is not affiliated with or endorsed by Teachable. Teachable details were retrieved from its public pricing and product pages in August 2026 and may change — always confirm current pricing on the official pages.</p>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-navy-900 text-gray-400 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <img src="../assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert" width="160" height="56">
+                    <p class="text-sm leading-relaxed max-w-xs">Sell courses, exams, and certificates — and host live classes — directly from your Shopify store.</p>
+                    <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 mt-5 bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-lg text-sm font-semibold transition border border-white/15">Install on Shopify</a>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../courses.html" class="hover:text-teal-400 transition">Courses &amp; video</a></li>
+                        <li><a href="../exams.html" class="hover:text-teal-400 transition">Examinations</a></li>
+                        <li><a href="../certificates.html" class="hover:text-teal-400 transition">Certificates</a></li>
+                        <li><a href="../live-classes.html" class="hover:text-teal-400 transition">Live classes</a></li>
+                        <li><a href="../storefront.html" class="hover:text-teal-400 transition">Sell on Shopify</a></li>
+                        <li><a href="../engagement.html" class="hover:text-teal-400 transition">Engage &amp; grow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../features.html" class="hover:text-teal-400 transition">All features</a></li>
+                        <li><a href="../pricing.html" class="hover:text-teal-400 transition">Pricing</a></li>
+                        <li><a href="../guides.html" class="hover:text-teal-400 transition">Guides</a></li>
+                        <li><a href="../setup.html" class="hover:text-teal-400 transition">Setup guide</a></li>
+                        <li><a href="../index.html#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="../zoom-setup.html" class="hover:text-teal-400 transition">Zoom setup guide</a></li>
+                        <li><a href="../tevello-alternative.html" class="hover:text-teal-400 transition">Tevello alternative</a></li>
+                        <li><a href="../courses-plus-alternative.html" class="hover:text-teal-400 transition">Courses Plus alternative</a></li>
+                        <li><a href="../teachable-alternative.html" class="hover:text-teal-400 transition">Teachable alternative</a></li>
+                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.pixipace.com" class="hover:text-teal-400 transition">Pixipace</a></li>
+                        <li><a href="mailto:chapters@pixipace.com" class="hover:text-teal-400 transition">chapters@pixipace.com</a></li>
+                        <li><a href="../privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                        <li><a href="../terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-sm">&copy; <span data-year>2026</span> Pixipace. All rights reserved.</p>
+                <p class="text-sm">Free to install · 5% only when you sell</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/site.js" defer></script>
+</body>
+</html>
