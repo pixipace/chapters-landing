@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    { "source": "/pricing", "destination": "/pricing.html", "permanent": true },
+    { "source": "/features", "destination": "/features.html", "permanent": true },
+    { "source": "/courses", "destination": "/courses.html", "permanent": true },
+    { "source": "/certificates", "destination": "/certificates.html", "permanent": true },
+    { "source": "/exams", "destination": "/exams.html", "permanent": true },
+    { "source": "/engagement", "destination": "/engagement.html", "permanent": true },
+    { "source": "/live-classes", "destination": "/live-classes.html", "permanent": true },
+    { "source": "/storefront", "destination": "/storefront.html", "permanent": true },
+    { "source": "/setup", "destination": "/setup.html", "permanent": true },
+    { "source": "/zoom-setup", "destination": "/zoom-setup.html", "permanent": true },
+    { "source": "/guides", "destination": "/guides.html", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
+    { "source": "/terms", "destination": "/terms.html", "permanent": true },
+    { "source": "/teachable-alternative", "destination": "/teachable-alternative.html", "permanent": true },
+    { "source": "/tevello-alternative", "destination": "/tevello-alternative.html", "permanent": true },
+    { "source": "/courses-plus-alternative", "destination": "/courses-plus-alternative.html", "permanent": true }
+  ]
+}
