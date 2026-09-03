@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="js-off">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Students a My Courses Button on Your Shopify Store (3 Steps)</title>
+    <meta name="description" content="Three ways students get back into their Chapters courses on your Shopify store: a My Courses button in the header, a course access card on the product page, and a My Learning page inside their Shopify account.">
+    <link rel="canonical" href="https://www.chapterslms.com/tutorials/give-students-a-my-courses-button.html">
+    <meta name="theme-color" content="#16376d">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Chapters">
+    <meta property="og:title" content="Give Students a My Courses Button on Your Shopify Store (3 Steps)">
+    <meta property="og:description" content="Three ways students get back into their Chapters courses on your Shopify store: a My Courses button in the header, a course access card on the product page, and a My Learning page inside their Shopify account.">
+    <meta property="og:image" content="https://www.chapterslms.com/assets/tutorials/student-access/01-my-courses-button-settings.png">
+    <meta property="og:url" content="https://www.chapterslms.com/tutorials/give-students-a-my-courses-button.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Give Students a My Courses Button on Your Shopify Store (3 Steps)">
+    <meta name="twitter:description" content="Three ways students get back into their Chapters courses on your Shopify store: a My Courses button in the header, a course access card on the product page, and a My Learning page inside their Shopify account.">
+    <meta name="twitter:image" content="https://www.chapterslms.com/assets/tutorials/student-access/01-my-courses-button-settings.png">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        navy: { 50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#16376d',900:'#0f2744' },
+                        teal: { 50:'#effcf6',100:'#c6f7e2',200:'#8eedc7',300:'#65d6ad',400:'#3ebd93',500:'#25ad9f',600:'#199473',700:'#147d64',800:'#0c6b58',900:'#014d40' },
+                        gold: { 50:'#fbf7ee',100:'#f5ebd0',200:'#e9d4a0',300:'#dcbb6e',400:'#cfa548',500:'#c79a3a',600:'#a87d2c',700:'#855f24' },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/site.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Give students a way back into their courses",
+      "description": "Three ways students get back into their Chapters courses on your Shopify store: a My Courses button in the header, a course access card on the product page, and a My Learning page inside their Shopify account.",
+      "totalTime": "PT5M",
+      "tool": [{"@type": "HowToTool", "name": "Chapters LMS for Shopify"}],
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Add the My Courses button to your header", "url": "https://www.chapterslms.com/tutorials/give-students-a-my-courses-button.html#step-1"},
+        {"@type": "HowToStep", "position": 2, "name": "Add the Course Access Card to your product page", "url": "https://www.chapterslms.com/tutorials/give-students-a-my-courses-button.html#step-2"},
+        {"@type": "HowToStep", "position": 3, "name": "Turn on My Learning in customer accounts", "url": "https://www.chapterslms.com/tutorials/give-students-a-my-courses-button.html#step-3"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.chapterslms.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.chapterslms.com/guides.html"},
+        {"@type": "ListItem", "position": 3, "name": "My Courses button", "item": "https://www.chapterslms.com/tutorials/give-students-a-my-courses-button.html"}
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTTG1EZCKX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZTTG1EZCKX');
+    </script>
+</head>
+<body class="antialiased text-navy-900 bg-white">
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="siteNav" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center" aria-label="Chapters home">
+                    <img src="../assets/logo.svg" alt="Chapters" class="h-8" width="160" height="56">
+                </a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <div class="relative group">
+                        <a href="../features.html" class="flex items-center gap-1 text-gray-600 hover:text-navy-800 transition font-medium py-5">
+                            Features
+                            <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[34rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 pt-2">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 grid grid-cols-2 gap-1">
+                                <a href="../courses.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Courses &amp; video</span><span class="block text-xs text-gray-500 mt-0.5">Builder, secure player, quizzes</span></span>
+                                </a>
+                                <a href="../exams.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Examinations</span><span class="block text-xs text-gray-500 mt-0.5">Timed, randomized, paid retakes</span></span>
+                                </a>
+                                <a href="../certificates.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Certificates</span><span class="block text-xs text-gray-500 mt-0.5">Branded PDFs, public verify</span></span>
+                                </a>
+                                <a href="../live-classes.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Live classes</span><span class="block text-xs text-gray-500 mt-0.5">Zoom, scheduled in-lesson</span></span>
+                                </a>
+                                <a href="../storefront.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Sell on Shopify</span><span class="block text-xs text-gray-500 mt-0.5">Blocks, checkout, auto-enroll</span></span>
+                                </a>
+                                <a href="../engagement.html" class="flex gap-3 p-3 rounded-xl hover:bg-navy-50/60 transition">
+                                    <span class="text-teal-600 mt-0.5">▸</span>
+                                    <span><span class="block font-semibold text-navy-900 text-sm">Engage &amp; grow</span><span class="block text-xs text-gray-500 mt-0.5">Q&amp;A, email, push, insights</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../guides.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Guides</a>
+                    <a href="../pricing.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Pricing</a>
+                    <a href="../setup.html" class="text-gray-600 hover:text-navy-800 transition font-medium">Setup guide</a>
+                    <a href="../index.html#faq" class="text-gray-600 hover:text-navy-800 transition font-medium">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://apps.shopify.com/chapters" class="hidden sm:inline-flex bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-sm">
+                        Install Free
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-navy-900" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <p class="px-3 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Features</p>
+                <a href="../courses.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Courses &amp; video</a>
+                <a href="../exams.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Examinations</a>
+                <a href="../certificates.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Certificates</a>
+                <a href="../live-classes.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Live classes</a>
+                <a href="../storefront.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Sell on Shopify</a>
+                <a href="../engagement.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Engage &amp; grow</a>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <a href="../features.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">All features</a>
+                <a href="../pricing.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Pricing</a>
+                <a href="../setup.html" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">Setup guide</a>
+                <a href="../index.html#faq" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-navy-50/60 font-medium">FAQ</a>
+                <a href="https://apps.shopify.com/chapters" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white text-center px-5 py-3 rounded-lg font-semibold transition">Install Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-28 md:pt-36 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Breadcrumb -->
+            <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+                <ol class="flex flex-wrap items-center gap-1.5">
+                    <li><a href="../index.html" class="hover:text-teal-600 transition">Home</a></li>
+                    <li aria-hidden="true">&rsaquo;</li>
+                    <li><a href="../guides.html" class="hover:text-teal-600 transition">Guides</a></li>
+                    <li aria-hidden="true">&rsaquo;</li>
+                    <li class="text-gray-700" aria-current="page">My Courses button</li>
+                </ol>
+            </nav>
+
+            <p class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-3">Tutorial &middot; 3 steps &middot; about 5 minutes</p>
+            <h1 class="font-display text-3xl md:text-5xl font-bold text-navy-900 leading-[1.1] tracking-tight mb-5 text-balance">Give students a way back into their courses</h1>
+            <p class="text-sm text-gray-500 mb-8">By <span class="font-semibold text-navy-900">Gill</span> &middot; builder of Chapters LMS &middot; Updated September 2026</p>
+
+            <p class="text-xl text-gray-700 leading-relaxed mb-10 border-l-4 border-teal-400 pl-5 text-pretty">Buying a course is the easy part. The question students ask a week later is <em>&ldquo;where do I log in?&rdquo;</em> Chapters answers it in three places: a <strong>My Courses</strong> button anywhere in your theme, a <strong>Course Access Card</strong> on every course page, and a <strong>My Learning</strong> page inside their normal Shopify account. Each takes about a minute.</p>
+
+            <div class="bg-navy-50/60 border border-navy-100 rounded-2xl p-6 mb-10">
+                <p class="font-semibold text-navy-900 mb-2">What you need</p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                    <li>Chapters installed, with at least one published course.</li>
+                    <li>Shopify's modern customer accounts (Settings &rarr; Customer accounts). Legacy accounts still get the button and the card, but not My Learning.</li>
+                </ul>
+            </div>
+
+            <h2 id="step-1" class="font-display text-2xl md:text-3xl font-bold text-navy-900 mb-4 tracking-tight">Step 1: Add the My Courses button to your header</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Open the theme editor (<strong>Online Store &rarr; Themes &rarr; Customize</strong>). In the <strong>Header</strong> group press <strong>Add block &rarr; Apps &rarr; My Courses Button</strong>. Pick the text, style, colours and alignment, then <strong>Save</strong>. The button opens the student portal; visitors who aren't signed in are asked to sign in first.</p>
+            <figure class="my-6">
+                <img src="../assets/tutorials/student-access/01-my-courses-button-settings.png" alt="Theme editor with the My Courses Button block selected in the header: button text, book icon toggle, filled style, colours, alignment and corner radius" width="1536" height="674" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm">
+                <figcaption class="text-sm text-gray-500 mt-2">Header block. You can add the same block to the footer or any page section.</figcaption>
+            </figure>
+
+            <h2 id="step-2" class="font-display text-2xl md:text-3xl font-bold text-navy-900 mb-4 tracking-tight">Step 2: Add the Course Access Card to your product page</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Switch the editor to <strong>Products &rarr; Default product</strong> and add <strong>Course Access Card</strong> from the Apps tab, just below the buy box. Guests see &ldquo;Already enrolled? Sign in&rdquo;. A signed-in student who owns the course sees <em>You're enrolled</em> with an <strong>Open my courses</strong> button instead of a second buy button.</p>
+            <figure class="my-6">
+                <img src="../assets/tutorials/student-access/02-course-access-card-settings.png" alt="Course Access Card block settings for logged-in customers and guest visitors, next to the card rendered under the course curriculum" width="1536" height="674" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm">
+                <figcaption class="text-sm text-gray-500 mt-2">Two sets of wording: one for signed-in students, one for guests. The card renders only on course products.</figcaption>
+            </figure>
+
+            <h2 id="step-3" class="font-display text-2xl md:text-3xl font-bold text-navy-900 mb-4 tracking-tight">Step 3: Turn on My Learning in customer accounts</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Go to <strong>Settings &rarr; Customer accounts</strong>. Make sure the modern accounts are on, then press <strong>Customize</strong>. In the editor's page selector choose <strong>My Learning</strong> under <em>Apps</em>, and accept when it offers to add the page to the account menu. Save.</p>
+            <figure class="my-6">
+                <img src="../assets/tutorials/student-access/03-customer-accounts-settings.png" alt="Shopify Settings, Customer accounts page with modern customer accounts enabled and the Customize button" width="1536" height="618" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm">
+                <figcaption class="text-sm text-gray-500 mt-2">Modern customer accounts are required. The Customize button opens the same editor as checkout.</figcaption>
+            </figure>
+            <p class="text-gray-700 leading-relaxed mb-4">From then on, the account area a customer already uses for orders has a <strong>My Learning</strong> page: enrolled courses with progress, a &ldquo;continue where you left off&rdquo; card, pending quizzes and upcoming live classes. Inside the editor it previews with a placeholder customer, so it looks empty there; sign in to your storefront to see it for real.</p>
+
+            <h2 id="which-one" class="font-display text-2xl md:text-3xl font-bold text-navy-900 mb-4 tracking-tight">Which one do students actually use?</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">All three lead to the same place, the student portal at <code>/apps/courses</code> on your domain. The header button is what most students click. The access card catches people who come back to the product page from a bookmark or an old email. My Learning is for the ones who go to their account first, the way they would for an order. Set up all three; it's five minutes, and you'll never write a &ldquo;how do I log in&rdquo; reply again.</p>
+
+                        <h2 id="troubleshooting" class="font-display text-2xl md:text-3xl font-bold text-navy-900 mb-4 tracking-tight">If something's not right</h2>
+            <div class="divide-y divide-gray-200 border-t border-gray-200 mb-10">
+                <details class="group py-5"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">The button says sign in, but the student has an account</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">They're signing in with a different email than the one on the order. Ask which email they used at checkout; they can also claim the course by signing in with the order email once.</p></details>
+                <details class="group py-5"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">My Learning doesn't appear in the page selector</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">You're on legacy customer accounts. Switch to the modern accounts in Settings &rarr; Customer accounts, then reopen the editor.</p></details>
+                <details class="group py-5"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Can I rename the button?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">Yes: <em>Button text</em> in the block settings. &ldquo;My Learning&rdquo;, &ldquo;Student login&rdquo; and &ldquo;Classroom&rdquo; are common choices.</p></details>
+                <details class="group py-5"><summary class="flex justify-between items-center cursor-pointer"><span class="text-lg font-semibold text-navy-900 group-hover:text-teal-600 transition">Do guests who bought without an account lose access?</span><span class="faq-toggle w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-navy-900 text-xl flex-shrink-0 ml-4">+</span></summary><p class="mt-4 text-gray-600 leading-relaxed">No. They sign in (or create an account) with the email they used at checkout and the course is waiting for them.</p></details>
+            </div>
+
+                        <h2 id="next" class="font-display text-2xl md:text-3xl font-bold text-navy-900 mb-4 tracking-tight">Next</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Now that students can find their way back, prove the whole journey once: run the <a href="../setup.html#launch-test" class="text-teal-600 underline">launch test</a>, buy your own course and follow the button, card and account page as a student would. Stuck? Email <a href="mailto:chapters@pixipace.com" class="text-teal-600 underline">chapters@pixipace.com</a> and I'll look at your store.</p>
+        </div>
+    </article>
+
+    <!-- ============ CTA ============ -->
+    <section class="gradient-bg hero-pattern py-20 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-5 tracking-tight text-balance">Ready to sell your first course?</h2>
+            <p class="text-xl text-navy-100 mb-8 max-w-xl mx-auto">Install Chapters free from the Shopify App Store. Free until you sell — 5% after, never more than $29 a month.</p>
+            <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg hover:shadow-xl">
+                Install Free
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <p class="text-sm text-navy-200 mt-5">Free to install · No monthly fee · 5% only when you sell, capped at $29/month</p>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-navy-900 text-gray-400 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <img src="../assets/logo.svg" alt="Chapters" class="h-8 mb-4 brightness-0 invert" width="160" height="56">
+                    <p class="text-sm leading-relaxed max-w-xs">Sell courses, exams, and certificates — and host live classes — directly from your Shopify store.</p>
+                    <a href="https://apps.shopify.com/chapters" class="inline-flex items-center gap-2 mt-5 bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-lg text-sm font-semibold transition border border-white/15">Install on Shopify</a>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../courses.html" class="hover:text-teal-400 transition">Courses &amp; video</a></li>
+                        <li><a href="../exams.html" class="hover:text-teal-400 transition">Examinations</a></li>
+                        <li><a href="../certificates.html" class="hover:text-teal-400 transition">Certificates</a></li>
+                        <li><a href="../live-classes.html" class="hover:text-teal-400 transition">Live classes</a></li>
+                        <li><a href="../storefront.html" class="hover:text-teal-400 transition">Sell on Shopify</a></li>
+                        <li><a href="../engagement.html" class="hover:text-teal-400 transition">Engage &amp; grow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../features.html" class="hover:text-teal-400 transition">All features</a></li>
+                        <li><a href="../pricing.html" class="hover:text-teal-400 transition">Pricing</a></li>
+                        <li><a href="../guides.html" class="hover:text-teal-400 transition">Guides</a></li>
+                        <li><a href="../setup.html" class="hover:text-teal-400 transition">Setup guide</a></li>
+                        <li><a href="../index.html#faq" class="hover:text-teal-400 transition">FAQ</a></li>
+                        <li><a href="../zoom-setup.html" class="hover:text-teal-400 transition">Zoom setup guide</a></li>
+                        <li><a href="../tevello-alternative.html" class="hover:text-teal-400 transition">Tevello alternative</a></li>
+                        <li><a href="../courses-plus-alternative.html" class="hover:text-teal-400 transition">Courses Plus alternative</a></li>
+                        <li><a href="../teachable-alternative.html" class="hover:text-teal-400 transition">Teachable alternative</a></li>
+                        <li><a href="https://apps.shopify.com/chapters" class="hover:text-teal-400 transition">Shopify App Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.pixipace.com" class="hover:text-teal-400 transition">Pixipace</a></li>
+                        <li><a href="mailto:chapters@pixipace.com" class="hover:text-teal-400 transition">chapters@pixipace.com</a></li>
+                        <li><a href="../privacy.html" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                        <li><a href="../terms.html" class="hover:text-teal-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-sm">&copy; <span data-year>2026</span> Pixipace. All rights reserved.</p>
+                <p class="text-sm">Free to install · 5% only when you sell</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/site.js" defer></script>
+</body>
+</html>
